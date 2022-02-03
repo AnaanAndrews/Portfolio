@@ -38,23 +38,23 @@ const Lights = () => {
   )
 }
 
-const HtmlContent = ({domContent, children,groupPositionY, position, rotation, bgRef, scale})=>{
+const HtmlContent = ({domContent, children,groupPositionY, position, rotation, bgColor, scale})=>{
 
   const [refItem, inView] = useInView({
     threshold: .3
   })
 //If Object is in view Change Background colour
   useEffect(() => {
-    inView && (document.body.style.backgroundPositionX +=10) 
+    inView && (document.body.style.backgroundColor = bgColor) 
   }, [inView])
   return(
-    <Section factor={1.5} offset={1}>
+    <Section  factor={1.5} offset={1}>
       <group position={[0,groupPositionY,0]}>
         <mesh  position={position} rotation={rotation} scale={scale}>
           <PineCan/>
         </mesh>
         <Html portal={domContent} fullscreen>
-          <div ref={refItem}>{children}</div>
+          <div  ref={refItem}>{children}</div>
           </Html> 
       </group>
     </Section>
@@ -81,7 +81,7 @@ function App() {
           position={[50,-30,0]} 
           rotation={[.3,0,0]}
           scale={3.5}
-          bgRef={('./Assets/svg/sideLayer2.svg')}>
+          bgColor={'#f15946'}>
             <Title/>
           </HtmlContent>
           <HtmlContent 
@@ -90,24 +90,31 @@ function App() {
           position={[0,-30,0]} 
           rotation={[1,0,0]}
           scale={3.5}
-          bgRef={('./Assets/svg/layer1.svg')}>    
+          bgColor={'#002233'}>    
             <div className='container'>
               <div className='centered'>
               <h1 className='title'>About me</h1>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi adipisci numquam ea officiis amet sequi veniam, dolore, corrupti vel accusamus pariatur eligendi molestiae ab voluptas temporibus nulla nobis soluta veritatis.</p>
-              </div>
-              <div className='centered'>
+            </div>
+                  </div>
+          </HtmlContent>
+          <HtmlContent 
+          domContent={domContent} 
+          groupPositionY={-250} 
+          position={[0,-30,0]} 
+          rotation={[1,0,0]}
+          scale={3.5}
+          bgColor={'#333333'}>
+              <div className='containe'>
+              <div className='top'>
               <h1 className='title'>Skills</h1>
-              <p>Front End</p>
-              <img src={require('./Assets/Images/Skills/React.png')}></img>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi adipisci numquam ea officiis amet sequi veniam, dolore, corrupti vel accusamus pariatur eligendi molestiae ab voluptas temporibus nulla nobis soluta veritatis.</p>
               </div>
             </div>
           </HtmlContent>
     </Suspense>
     </Canvas>
-    <div>
-    <Title/>
-    </div>
+
     <div className="scrollArea" ref={scrollArea} onScroll={onScroll}>
       <div style={{position: 'sticky', top:0}}ref={domContent}></div>
       <div style={{height: `${state.pages * 100}vh`}}></div>
