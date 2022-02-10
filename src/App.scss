@@ -61,7 +61,7 @@ html,body,#root {
 }
 
 .centered {
-  width: 95vh;
+  width: 100vh;
   margin: 10vh auto 60vh auto;
   h1{
     color: #f15946;
@@ -76,10 +76,20 @@ html,body,#root {
 }
 
 .top{
-  width: 95vh;
+  width: 100vh;
   margin: 0 auto 90vh auto;
+  text-align: center;
+  
   h1{
     color: #f15946;
+    font-size: 72px;
+    margin-bottom: 5px;
+  }
+  h2{
+    color: #fff;
+    font-size: 30px;
+    margin-top: 0px;
+    font-weight: 100;
   }
   p{
     color: #fff;
@@ -120,6 +130,39 @@ html,body,#root {
 }
 }
 
+.SkillArea{
+ width: 100%;
+  margin: 5vh 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+
+.Skill{
+  
+  margin: 0 3vh;
+  width: 27vh;
+  align-items: center;
+  h1{
+    font-size: 30px;
+    color: #f15946;
+  }
+  p{
+    font-weight: 100;
+    font-size: 20px;
+  }
+
+}
+
+.icon{
+  margin: 10px 5px 0 5px;
+}
+
+.SkillIcon{
+
+    position: relative;
+}
 .loading {
   position: absolute;
   top: 0px;
