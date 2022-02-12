@@ -13,33 +13,15 @@ import state from './components/state.js';
 // Model;=
 import PineCan from './components/Pineapplesoda.js' ;
 
+import Basket from './components/DiscLowQual'
+
 //Inersection Observer
 import {useInView} from 'react-intersection-observer';
 
-//Lazy Load
-import LazyLoad from 'react-lazyload';
 
-// import ReactLogo from './Assets/Images/Skills/React.png'
+//Import Circles
 
-import BootStrapLogo from './Assets/Images/Skills/BootStrap.svg'
-
-import JavaScriptLogo from './Assets/Images/Skills/JavaScript.svg'
-
-import CSharpLogo from './Assets/Images/Skills/CSharp.svg'
-
-import NodeJsLogo from './Assets/Images/Skills/NodeJs.svg'
-
-import MySQLLogo from './Assets/Images/Skills/MySQL.svg'
-
-import ReactLogo from './Assets/Images/Skills/React.svg'
-
-import GitHubLogo from './Assets/Images/Skills/GitHub.svg'
-
-// import ASPLogo from './Assets/Images/Skills/ASP.svg' //FIX ASP LOGO
-
-import InkScapeLogo from './Assets/Images/Skills/InkScape.svg'
-
-import AffinityLogo from './Assets/Images/Skills/Affinity.svg'
+import Circle from './Assets/svg/Circle.svg'
 
 const Lights = () => {
   return(
@@ -58,7 +40,7 @@ const Lights = () => {
   )
 }
 
-const HtmlContent = ({domContent, children,groupPositionY, position, rotation, bgColor, scale})=>{
+const HtmlContent = ({domContent, children,groupPositionY, position, rotation, bgColor, scale, Model})=>{
 
   const [refItem, inView] = useInView({
     threshold: .3
@@ -71,7 +53,7 @@ const HtmlContent = ({domContent, children,groupPositionY, position, rotation, b
     <Section  factor={1.5} offset={1}>
       <group position={[0,groupPositionY,0]}>
         <mesh  position={position} rotation={rotation} scale={scale}>
-          <PineCan/>
+        {GetModel(Model={Model})}
         </mesh>
         <Html portal={domContent} fullscreen>
           <div  ref={refItem}>{children}</div>
@@ -79,6 +61,15 @@ const HtmlContent = ({domContent, children,groupPositionY, position, rotation, b
       </group>
     </Section>
   )
+}
+
+const GetModel = ({Model})=>{
+if (Model == 'can')
+  return <PineCan/>
+if (Model == 'basket')
+return <Basket/>
+else return
+
 }
 
 const SkillIcon = ({src, alt, top, left, height})=>{
@@ -103,22 +94,26 @@ function App() {
     <Canvas colorManagment camera={{position: [0,0,120], fov:70, rotation: [0,0,0]}} > 
       <Suspense fallback={null}>
         <Environment files="winter_evening_1k.hdr"/>
+        {/* <Environment files="comfy_cafe_1k.hdr"/> */}
           <HtmlContent  
           domContent={domContent} 
-          groupPositionY={250} 
+          groupPositionY={370} 
           position={[50,-30,0]} 
           rotation={[.3,0,0]}
           scale={3.5}
-          bgColor={'#f15946'}>
+          bgColor={'#f15946'}
+          Model={'can'}>
             <Title/>
           </HtmlContent>
           <HtmlContent 
           domContent={domContent} 
-          groupPositionY={0} 
-          position={[0,-30,0]} 
-          rotation={[1,0,0]}
-          scale={3.5}
-          bgColor={'#002233'}>    
+          groupPositionY={150} 
+          position={[430,-130,0]} 
+          rotation={[0,0,0]}
+          scale={100}
+          // bgColor={'#002233'}
+          bgColor={'#333333'}
+          Model={'basket'}>    
             <div className='container'>
               <div className='centered'>
               <h1 className='title'>About me</h1>
@@ -128,43 +123,69 @@ function App() {
           </HtmlContent>
           <HtmlContent 
           domContent={domContent} 
-          groupPositionY={-250} 
+          groupPositionY={-50} 
           position={[0,-100,0]} 
           rotation={[1,0,0]}
           scale={3.5}
-          bgColor={'#333333'}>
-            
+          bgColor={'#333333'}
+          Model={''}>
               <div className='top'>
-              <h1>Skills</h1>
-              <h2>What I'm best at!</h2>
-              <div className='SkillArea'>
-                <div className='Skill left'>
-                  <h1>Front-End</h1>
-                  <div className='LogoArea'>
-                    <img src={JavaScriptLogo} className='icon' height={30}/>
-                    <img src={JavaScriptLogo} className='icon' height={30}/>
-                    <img src={JavaScriptLogo} className='icon' height={30}/>
+                <h1>Skills</h1>
+                <h2>What I'm best at!</h2>
+                <div className='SkillContainer'></div>
+              </div>
+          </HtmlContent>
+          <HtmlContent 
+          domContent={domContent} 
+          groupPositionY={-270} 
+          position={[0,-100,0]} 
+          rotation={[1,0,0]}
+          scale={3.5}
+          bgColor={'#333333'}
+          Model={''}>
+              <div className='top'>
+                <h1>Projects</h1>
+                <h2>Cool things I've Created!</h2>
+                <div className="Project">
+                  <div className="Description">
+                  <h3>On Going</h3>
+                    <h2>Grow Community Project</h2>   
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis aut minus obcaecati ipsam quisquam, fugiat tempore ducimus commodi a voluptate officia magni, cumque reprehenderit! Amet eaque aspernatur aliquam dolorem et?</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis aut minus obcaecati ipsam quisquam, fugiat tempore ducimus commodi a voluptate officia magni, cumque reprehenderit! Amet eaque aspernatur aliquam dolorem et?</p>                                 
                   </div>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet earum asperiores delectus consequatur corrupti cupiditate est laboriosam. Cupiditate accusamus iusto consectetur nobis earum nemo reprehenderit dolor animi modi, quidem laudantium. </p>
+                  <div className="ImageDisplay">
+                      <div className="test">
+
+                      </div>
+                  </div>
                 </div>
-                <div className='Skill Space'>
-                  <h1>Back-End</h1>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet earum asperiores delectus consequatur corrupti cupiditate est laboriosam. Cupiditate accusamus iusto consectetur nobis earum nemo reprehenderit dolor animi modi, quidem laudantium. </p>
+                <div className="Project">
+                  <div className="Description">
+                  <h3>On Going</h3>
+                    <h2>Grow Community Project</h2>   
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis aut minus obcaecati ipsam quisquam, fugiat tempore ducimus commodi a voluptate officia magni, cumque reprehenderit! Amet eaque aspernatur aliquam dolorem et?</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis aut minus obcaecati ipsam quisquam, fugiat tempore ducimus commodi a voluptate officia magni, cumque reprehenderit! Amet eaque aspernatur aliquam dolorem et?</p>                                 
+                  </div>
+                  <div className="ImageDisplay">
+                      <div className="test">
+
+                      </div>
+                  </div>
                 </div>
-                <div className='Skill'>
-                  <h1>Tools</h1>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet earum asperiores delectus consequatur corrupti cupiditate est laboriosam. Cupiditate accusamus iusto consectetur nobis earum nemo reprehenderit dolor animi modi, quidem laudantium. </p>
+                <div className="Project">
+                  <div className="Description">
+                  <h3>On Going</h3>
+                    <h2>Grow Community Project</h2>   
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis aut minus obcaecati ipsam quisquam, fugiat tempore ducimus commodi a voluptate officia magni, cumque reprehenderit! Amet eaque aspernatur aliquam dolorem et?</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis aut minus obcaecati ipsam quisquam, fugiat tempore ducimus commodi a voluptate officia magni, cumque reprehenderit! Amet eaque aspernatur aliquam dolorem et?</p>                                 
+                  </div>
+                  <div className="ImageDisplay">
+                      <div className="test">
+
+                      </div>
+                  </div>
                 </div>
               </div>
-              {/* {<SkillIcon top={-440} left={-600} alt={'React.Js Logo'} src={ReactLogo}></SkillIcon> */}
-              <SkillIcon top={-440} left={600} alt={'BootStrap Icon'}  height={40} src={BootStrapLogo}></SkillIcon>
-              <SkillIcon top={0} left={-280} alt={'Javascript Icon'} height={50} src={JavaScriptLogo}></SkillIcon>
-              <SkillIcon top={50} left={0} alt={'C Sharp Icon'} height={50} src={CSharpLogo}></SkillIcon>
-              <SkillIcon top={50} left={100} alt={'SQL Logo'} height={50} src={MySQLLogo}></SkillIcon>
-              <SkillIcon top={-100} left={500} alt={'GitHub Logo'} height={50} src={GitHubLogo}></SkillIcon>
-              {/* <img src={JavaScriptLogo}/> */}
-              </div>
-              
           </HtmlContent>
     </Suspense>
     </Canvas>

@@ -14,6 +14,13 @@ sans-serif;
 }
 
 
+h1{
+  font-size: 30px;
+}
+h2, h3{
+  font-size: 20px;
+}
+
 html,body,#root {
   width: 100%;
   height: 100%;
@@ -61,8 +68,8 @@ html,body,#root {
 }
 
 .centered {
-  width: 100vh;
-  margin: 10vh auto 60vh auto;
+  width: 50vh;
+  margin: 50vh auto 60vh 47vh;
   h1{
     color: #f15946;
   }
@@ -130,30 +137,24 @@ html,body,#root {
 }
 }
 
-.SkillArea{
- width: 100%;
-  margin: 5vh 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-}
 
 
-.Skill{
+
+// .Skill{
   
-  margin: 0 3vh;
-  width: 27vh;
-  align-items: center;
-  h1{
-    font-size: 30px;
-    color: #f15946;
-  }
-  p{
-    font-weight: 100;
-    font-size: 20px;
-  }
+//   margin: 0 3vh;
+//   width: 27vh;
+//   align-items: center;
+//   h1{
+//     font-size: 30px;
+//     color: #f15946;
+//   }
+//   p{
+//     font-weight: 100;
+//     font-size: 20px;
+//   }
 
-}
+// }
 
 .icon{
   margin: 10px 5px 0 5px;
@@ -198,18 +199,80 @@ html,body,#root {
 }
 
 
+// .SkillArea{
+//   width: 100%;
+//    margin: 5vh 0;
+//    padding: 0;
+//    display: flex;
+//    align-items: center;
+//  }
 
 
 
 
 
+.SkillContainer{
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  background-image: url('./Assets/svg/Circle.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.SkillArea{
+  background-image: url('./Assets/svg/Circle.svg');
+  height: 50vh;
+  width: 33vh;
+  text-align: center;
+  h2,h3{
+    position: relative;
+    color: #f15946;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  h2{
+    top: 20vh;
+  }
+  h3{
+    top: 30vh;
+  }
+
+}
 
 
+.Project{
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  margin-top: 10vh;
+}
+.Description{
+  width: 40%;
+  text-align: left;
+  h3{
+    margin-bottom: 0;
+    color: #f15946;
+    font-style: oblique;
+    font-weight: 500;
+    font-size: 22px;
+  }
 
+  p{
+    font-size: 18px;
+  }
 
+}
+.ImageDisplay{
+  margin-left: 10vh;
+  width: 50%;
+  padding: 10vh;
+  background-color: #f15946;
+}
 
-
-
+.test{
+  background-color: #fff;
+}
 
 
 
