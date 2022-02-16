@@ -5,7 +5,10 @@ return (
     <>
     
     <div className='leftcontainer'>
-    <h1 className='title'> Hi, Im Anaan. <h2 >I design &#38; build user interfaces</h2></h1> 
+    <div className='title'>
+    <h1> Hi, Im Anaan. </h1> 
+    <h2 >I design &#38; build user interfaces</h2>
+    </div>
     <div className="nav-links">
     <nav>
         <ul>

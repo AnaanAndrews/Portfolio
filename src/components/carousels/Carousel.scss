@@ -1,0 +1,69 @@
+.carousel-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+.carousel{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow-x: scroll;
+    position: relative;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    .carousel-item{
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 100%;
+        scroll-snap-align: start;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+}
+.carousel-btn{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    // transform: rotate(45deg);
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: rgba(255,255,255,.5);
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    padding: 0 .5rem 39px .5rem;
+    background-color: rgba(0,0,0,.3);
+
+    }
+    .right{
+        // border-right: 2px solid white;
+        // border-top: 2px solid white;
+        right: 0;
+        margin-right: 5px;
+  
+    }
+    .left{
+        // border-bottom: 2px solid white;
+        // border-left: 2px solid white;
+        left: 0;
+        margin-left: 5px;
+    }
+    :hover, :focus{
+        color: #fff;
+        background-color: rgba(0,0,0,.5);
+    }   
+    :focus{
+        outline: 1px solid black;
+    }
+}
+::-webkit-scrollbar{
+    height: 0;
+    width: 0;
+}
