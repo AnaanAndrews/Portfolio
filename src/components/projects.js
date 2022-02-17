@@ -32,7 +32,7 @@ return (
             </div>                          
         </div>
         <div className="ImageDisplay">
-            <img src={Meta}/>       
+            <img src={Meta} alt='Screen capture of this portfolio page, repeated'/>       
         </div>
     </div>
     <div className="Project">

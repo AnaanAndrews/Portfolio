@@ -1,5 +1,5 @@
 import './App.scss';
-import React, { Suspense,useRef, useEffect, useState} from 'react';
+import React, { Suspense,useRef, useEffect} from 'react';
 //Components
 import { Canvas } from 'react-three-fiber';
 import { Section } from './components/section';
@@ -53,7 +53,7 @@ const HtmlContent = ({domContent, children,groupPositionY, position, rotation, b
 
   }
 
-  var canPostionX = useRef()
+
 
   window.addEventListener('resize', function() {
     
@@ -204,7 +204,7 @@ function App() {
                 </li>
                 <li>
                 <li className="btn">
-                  <a href="./AnaanAndrewsResume.pdf" download='AnaanAndrewsResume.pdf'>Download Resume</a>
+                  <a href="/">View Resume</a>
                 </li>
                 </li>
                 </ul>
@@ -219,7 +219,7 @@ function App() {
 
     <div className="scrollArea" ref={scrollArea} onScroll={onScroll}>
       <div style={{position: 'sticky', top:0}}ref={domContent}></div>
-      <div style={{width: `${100}%`, height: `${state.pages * (window.innerWidth >= 1000? 113: 136)}vh`}}></div>
+      <div style={{width: `${100}%`, height: `${state.pages * (window.innerWidth >= 1000? 115: 136)}vh`}}></div>
     </div>
     
     </>

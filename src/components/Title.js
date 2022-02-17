@@ -4,10 +4,6 @@ import React from "react";
 
 function Title() {
 
-const MoveTo = () => {
-    console.log(this.props.value)
-}
-
 return (
     <>
      {/* window[`scrollTo`]({top: 0, behavior:`smooth`}) */}
