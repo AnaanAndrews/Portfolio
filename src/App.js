@@ -204,7 +204,7 @@ function App() {
                 </li>
                 <li>
                 <li className="btn">
-                  <a href="/">View Resume</a>
+                  <a href="./AnaanAndrewsResume.pdf" download='AnaanAndrewsResume.pdf'>Download Resume</a>
                 </li>
                 </li>
                 </ul>
