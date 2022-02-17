@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Portfolio/static/css/main.4a16e62b.css",
+    "main.js": "/Portfolio/static/js/main.e82cca3b.js",
+    "static/js/787.98afe203.chunk.js": "/Portfolio/static/js/787.98afe203.chunk.js",
+    "static/media/CGHome.png": "/Portfolio/static/media/CGHome.68f33cca85e7d5becd45.png",
+    "static/media/Map.png": "/Portfolio/static/media/Map.90a3206b94b1904b7fd5.png",
+    "static/media/Meta.png": "/Portfolio/static/media/Meta.a3f140ca8dd00cafe3cc.png",
+    "static/media/Home.png": "/Portfolio/static/media/Home.ffe7ea3a6eef4a41652d.png",
+    "static/media/CGAthletes.png": "/Portfolio/static/media/CGAthletes.0a8f76d287c64f3cd758.png",
+    "static/media/Circle.svg": "/Portfolio/static/media/Circle.32905244d6aaedb1b48d.svg",
+    "static/media/Members.png": "/Portfolio/static/media/Members.47b3087d1c9726495a4f.png",
+    "static/media/Graph.png": "/Portfolio/static/media/Graph.39d84b2c877f64537105.png",
+    "static/media/CGLookup.png": "/Portfolio/static/media/CGLookup.29802691d6aefa051971.png",
+    "static/media/CGAccount.png": "/Portfolio/static/media/CGAccount.af2c36c54e4d346226a8.png",
+    "index.html": "/Portfolio/index.html",
+    "main.4a16e62b.css.map": "/Portfolio/static/css/main.4a16e62b.css.map",
+    "main.e82cca3b.js.map": "/Portfolio/static/js/main.e82cca3b.js.map",
+    "787.98afe203.chunk.js.map": "/Portfolio/static/js/787.98afe203.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4a16e62b.css",
+    "static/js/main.e82cca3b.js"
+  ]
+}
