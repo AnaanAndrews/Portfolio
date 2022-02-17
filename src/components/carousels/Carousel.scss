@@ -24,11 +24,13 @@
     }
 
 }
+
 .carousel-btn{
     height: 30px;
     width: 30px;
     position: absolute;
     // transform: rotate(45deg);
+    
     z-index: 2;
     top: 50%;
     transform: translateY(-50%);
@@ -40,6 +42,7 @@
     border-radius: 0.25rem;
     padding: 0 .5rem 39px .5rem;
     background-color: rgba(0,0,0,.3);
+  
 
     }
     .right{
@@ -47,6 +50,7 @@
         // border-top: 2px solid white;
         right: 0;
         margin-right: 5px;
+
   
     }
     .left{
@@ -55,13 +59,20 @@
         left: 0;
         margin-left: 5px;
     }
-    :hover, :focus{
+
+  :hover, :focus{
         color: #fff;
         background-color: rgba(0,0,0,.5);
+        
     }   
     :focus{
+        
         outline: 1px solid black;
     }
+    
+
+
+  
 }
 ::-webkit-scrollbar{
     height: 0;

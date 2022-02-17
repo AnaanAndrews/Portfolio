@@ -1,9 +1,16 @@
 import React from "react";
 
-export default function Title() {
+
+
+function Title() {
+
+const MoveTo = () => {
+    console.log(this.props.value)
+}
+
 return (
     <>
-    
+     {/* window[`scrollTo`]({top: 0, behavior:`smooth`}) */}
     <div className='leftcontainer'>
     <div className='title'>
     <h1> Hi, Im Anaan. </h1> 
@@ -13,16 +20,16 @@ return (
     <nav>
         <ul>
         <li>
-        <a href="/">About me</a>
+        <input type="button" onClick={() => document.getElementById('about').scrollIntoView({behavior: "smooth", block: "center"})} value="About Me"/>
         </li>
         <li>
-        <a href="/">Projects</a>
+        <input type="button" onClick={() => document.getElementById('project').scrollIntoView({behavior: "smooth", block: "nearest"})} value="Projects"/>
         </li>
         <li>
-        <a href="/">Resume</a>
+        <input type="button" onClick={() => document.getElementById('contact').scrollIntoView({behavior: "smooth", block: "center"})} value="Contact"/>
         </li>
         <li className="btn">
-        <a href="/">Contact</a>
+        <input type="button" onClick={MoveTo} value="Resume"/>
         </li>
         </ul>
     </nav>
@@ -31,4 +38,4 @@ return (
 
     </>
 	);
-}
+}export default Title 

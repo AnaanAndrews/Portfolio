@@ -5,12 +5,12 @@ import Meta from '../Assets/Images/Portfolio/Meta.png'
 
 export default function Projects() {
 return (
-    <div className='top'>
-    <h1>Projects</h1>
-    <h2>Cool things I've Created!</h2>
+    <div  className='top'>
+    <h1 >Projects</h1>
+    <h2 >Cool things I've Created!</h2>
     <div className="Project">
         <div className="Title">
-            <h3>In Development</h3>
+            <h3 >In Development</h3>
             <h2>Grow Community Project</h2>   
             <div className="Description">
             <p>The GROW community project is an ASP.net MVC web application in development for the GROW community food literacy center. I am currently working on its development alongside four other team members.</p>

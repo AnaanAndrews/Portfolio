@@ -5,6 +5,7 @@ import { Canvas } from 'react-three-fiber';
 import { Section } from './components/section';
 import { Html, Environment} from '@react-three/drei';
 //Html Elements
+
 import Title from './components/Title.js';
 import Projects from './components/projects.js';
 
@@ -45,28 +46,69 @@ import {useInView} from 'react-intersection-observer';
 //   )
 // }
 
+
+
+
 const HtmlContent = ({domContent, children,groupPositionY, position, rotation, bgColor, scale, Model})=>{
+  const model = useRef()
+  const PostionX = (width, name) => {
+    if (name === 'can'){
+      if (width >= 2100){
+        return 50
+      }else if (width >= 1980){
+        return 60
+      }else if (width >= 1440){
+        return  30
+      }else{
+        return 0
+      }
+  }
+  else{
+    if (width >= 2100){
+      return 430
+    }else if (width >= 1980){
+      return 430
+    }else if (width >= 1440){
+      return  430
+    }else{
+      return 380
+    }
+  }
+
+  }
+
+  var canPostionX = useRef()
+
+  window.addEventListener('resize', function() {
+    
+    model.current.position.x = PostionX(window.innerWidth, model.current.name)
+    
+  });
 
   const [refItem, inView] = useInView({
-    threshold: .3
+    threshold: .8,
+  
   })
 //If Object is in view Change Background colour
   useEffect(() => {
-    inView && (document.body.style.backgroundColor = bgColor) 
+    inView && (document.body.style.backgroundColor = bgColor)
+  
   }, [inView])
+ 
   return(
 
     <Section  factor={1.5} offset={1}>
       <group position={[0,groupPositionY,0]}>
-        <mesh  position={position} rotation={rotation} scale={scale}  >
+        <mesh ref={model} name={Model} position={[PostionX(window.innerWidth, Model), position[1], position[2]]} rotation={rotation} scale={scale}  >
         {GetModel(Model={Model})}
         </mesh>
         <Html portal={domContent} fullscreen>
           <div  ref={refItem}>{children}</div>
           </Html> 
+          
       </group>
-      {console.log({position})}
     </Section>
+    
   )
 }
 
@@ -86,18 +128,15 @@ else return
 function App() {
   const domContent = useRef();
   const scrollArea = useRef();
-  var canPostionX = useRef()
 
-  window.addEventListener('resize', function() {
-    console.log(window.innerWidth + ', ' + window.innerHeight )
-    canPostionX = 50;
-    console.log(canPostionX);
-  });
+
 
 
   const onScroll = (e) => (state.top.current = e.target.scrollTop)
 
   useEffect(() => void onScroll({target: scrollArea.current}), [])
+
+  console.log(scrollArea)
 
 
   return (
@@ -110,7 +149,7 @@ function App() {
           <HtmlContent  
           domContent={domContent} 
           groupPositionY={370} 
-          position={[50,-30,0]} 
+          position={[0,-25,0]} 
           rotation={[.3,0,0]}
           scale={3.5}
           bgColor={'#f15946'}
@@ -126,12 +165,11 @@ function App() {
           // bgColor={'#002233'}
           bgColor={'#333333'}
           Model={'basket'}>    
-           
-              <div className='centered'>
-              <h1>About me</h1>
+              <div  className='centered'>
+              <h1 id="about" >About me</h1>
               <div className='Description'>
               <p>I am a full-stack developer who is hunting to conquer new and exciting programming / design challenges. I’m always looking to expand my toolset by learning new technologies And then implementing them in unique ways.</p>
-              <p>Outside of programming, I enjoy spending my time creating and texturing 3D models with blender and substance painter and throwing discs into baskets in disc golf.</p>
+              <p >Outside of programming, I enjoy spending my time creating and texturing 3D models with blender and substance painter and throwing discs into baskets in disc golf.</p>
               </div>
             </div>
                 
@@ -143,33 +181,72 @@ function App() {
           rotation={[1,0,0]}
           scale={3.5}
           bgColor={'#333333'}
-          Model={'no'}>
+          Model={'none'}>
               <div className='top'>
                 <h1>Skills</h1>
                 <h2>What I'm best at!</h2>
-                <div className='SkillContainer'></div>
+                <div id="project"  className='SkillContainer'></div>
               </div>
           </HtmlContent>
           <HtmlContent 
           domContent={domContent} 
-          groupPositionY={-270} 
+          groupPositionY={-250} 
           position={[0,-100,0]} 
           rotation={[1,0,0]}
           scale={3.5}
           bgColor={'#333333'}
           Model={'none'}>
-              <Projects/>
+              <Projects />
           </HtmlContent>
+          <HtmlContent 
+          domContent={domContent} 
+          groupPositionY={window.innerWidth >= 1000? -500: -740} 
+          position={[0,-100,0]} 
+          rotation={[1,0,0]}
+          scale={3.5}
+          bgColor={'#333333'}
+          Model={'none'}>
+          
+            <div className='contact'>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f15946" fill-opacity="1" d="M0,224L48,208C96,192,192,160,288,138.7C384,117,480,107,576,128C672,149,768,203,864,218.7C960,235,1056,213,1152,186.7C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+            <div className="contact-info">
+              <div className="title">
+                <h2>Like what you see?</h2>
+                <h1 id="contact">Hire Me</h1>
+                </div>
+                <ul>
+                <li>
+                <h3>Email</h3>
+                <h2>AnaanAndrews@gmail.com</h2>
+                </li>
+                <li>
+                <h3>Mobile</h3>
+                <h2>(289)-501-9132</h2>
+                </li>
+                <li>
+                <li className="btn">
+                  <a href="/">View Resume</a>
+                </li>
+                </li>
+                </ul>
+            </div>
+            </div>
+          </HtmlContent>
+
+
     </Suspense>
+
     </Canvas>
 
     <div className="scrollArea" ref={scrollArea} onScroll={onScroll}>
       <div style={{position: 'sticky', top:0}}ref={domContent}></div>
-      <div style={{width: `${100}%`, height: `${state.pages * 100}vh`}}></div>
+      <div style={{width: `${100}%`, height: `${state.pages * (window.innerWidth >= 1000? 113: 136)}vh`}}></div>
     </div>
+    
     </>
   );
 }
+//113 / -500
 // blue 571ec1
         {/* <mesh rotation={[-Math.PI /2,0,0]}>
           <planeBufferGeometry attach='geometry' args={[300,300]}/>
