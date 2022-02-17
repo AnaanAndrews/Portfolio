@@ -71,6 +71,9 @@ html,body,#root {
       }
     
     }
+
+
+    
     h2{
       font-weight: 300;
       margin-top: 0;
@@ -261,20 +264,21 @@ section{
         color: #fff;
         font-size: 24px;
         font-family: 600;
-        padding: 16px 0px;
+        padding:  0px;
       }
         list-style: none;
         margin: 0 30px;
         &.btn {
-        input {
+        a {
             color: #fff;
             font-weight: 600;
             background: #23232a;
             padding: 16px 24px;
             border-radius: 10px;
+            margin-top: 20vh;
         }
         }
-        input {
+        a {
           text-decoration: none;
             text-transform: capitalize; 
             color: #fff;
@@ -658,4 +662,11 @@ section{
  
 
   }
+}
+
+
+.all-page-container {
+  height: 100%;
+  max-height: 500px;
+  overflow: auto;
 }

@@ -1,5 +1,5 @@
 import './App.scss';
-import React, { Suspense,useRef, useEffect} from 'react';
+import React, { Suspense,useRef, useEffect, useState} from 'react';
 //Components
 import { Canvas } from 'react-three-fiber';
 import { Section } from './components/section';
@@ -20,31 +20,7 @@ import Basket from './Assets/Models/DiscLowQual'
 //Inersection Observer
 import {useInView} from 'react-intersection-observer';
 
-
-
-// const Lights = () => {
-//   return(
-//     <>
-//     {/* <directionalLight position={[-120,140,110]} intensity={1}/> */}
-//     {/* <pointLight position={[150,50,200]} intensity={.1}/> */}
-
-//     {/* <pointLight position={[150,2000,0]} intensity={2}/> */}
-
-//     <pointLight position={[0,40,-200]} intensity={.2}/>
-//     <pointLight position={[0,60,-200]} intensity={.2}/>
-//     <pointLight position={[0,80,-200]} intensity={.2}/>
-//     <pointLight position={[0,100,-200]} intensity={.2}/>
-//     <pointLight position={[0,160,-200]} intensity={.2}/>
-//     </>
-//   )
-// }
-// const SkillIcon = ({src, alt, top, left, height})=>{
-  
-//   return (
-//     <img src={src} alt={alt} style={{top: top, left: left}} height={height} className='SkillIcon'>
-//     </img>
-//   )
-// }
+//Resume
 
 
 
@@ -126,12 +102,14 @@ else return
 
 
 function App() {
+
+  //Resume View
+
+
+
+  //Scoll Section
   const domContent = useRef();
   const scrollArea = useRef();
-
-
-
-
   const onScroll = (e) => (state.top.current = e.target.scrollTop)
 
   useEffect(() => void onScroll({target: scrollArea.current}), [])
@@ -165,6 +143,7 @@ function App() {
           // bgColor={'#002233'}
           bgColor={'#333333'}
           Model={'basket'}>    
+
               <div  className='centered'>
               <h1 id="about" >About me</h1>
               <div className='Description'>

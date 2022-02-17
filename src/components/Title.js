@@ -29,7 +29,8 @@ return (
         <input type="button" onClick={() => document.getElementById('contact').scrollIntoView({behavior: "smooth", block: "center"})} value="Contact"/>
         </li>
         <li className="btn">
-        <input type="button" onClick={MoveTo} value="Resume"/>
+            <a href="./AnaanAndrewsResume.pdf" download='AnaanAndrewsResume.pdf'>Resume</a>
+        {/* <input type="button" onClick={MoveTo} value="Resume"/> */}
         </li>
         </ul>
     </nav>
