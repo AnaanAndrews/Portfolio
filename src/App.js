@@ -66,10 +66,10 @@ const HtmlContent = ({domContent, children,groupPositionY, position, rotation, b
   
   })
 //If Object is in view Change Background colour
-  useEffect((bgColor) => {
+  useEffect(() => {
     inView && (document.body.style.backgroundColor = bgColor)
   
-  }, [inView])
+  })
  
   return(
 
