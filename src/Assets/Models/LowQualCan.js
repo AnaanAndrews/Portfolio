@@ -7,14 +7,12 @@ import { useGLTF, useAnimations } from '@react-three/drei'
 
 export default function Model({ ...props }) {
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF('/pineapplesoda.glb')
+  const { nodes, materials, animations } = useGLTF('/lowQualCan.glb')
   const { actions } = useAnimations(animations, group)
   useEffect(()=>{
     actions.Spin.play();
     console.log(window.innerWidth);
   })
-
-  
 
   return (
     <group ref={group} {...props} dispose={null}>
@@ -40,4 +38,4 @@ export default function Model({ ...props }) {
   )
 }
 
-useGLTF.preload('/pineapplesoda.glb')
+useGLTF.preload('/lowQualCan.glb')

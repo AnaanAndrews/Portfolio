@@ -13,7 +13,7 @@ import Projects from './components/projects.js';
 import state from './components/state.js';
 
 // Model;=
-import PineCan from './Assets/Models/Pineapplesoda.js' ;
+import PineCan from './Assets/Models/LowQualCan.js' ;
 
 import Basket from './Assets/Models/DiscExtremlyLowQuality.js'
 
