@@ -66,7 +66,7 @@ const HtmlContent = ({domContent, children,groupPositionY, position, rotation, b
   
   })
 //If Object is in view Change Background colour
-  useEffect(() => {
+  useEffect((bgColor) => {
     inView && (document.body.style.backgroundColor = bgColor)
   
   }, [inView])
@@ -225,13 +225,5 @@ function App() {
     </>
   );
 }
-//113 / -500
-// blue 571ec1
-        {/* <mesh rotation={[-Math.PI /2,0,0]}>
-          <planeBufferGeometry attach='geometry' args={[300,300]}/>
-          <meshLambertMaterial attach='material' color={'#202020'}
-          reflectivity={100}/>
-        </mesh> */}
 
-//camera={{position: [0,0,120], fov:70}}
 export default App;
