@@ -5,7 +5,6 @@ import GMembers from '../../Assets/Images/Grow/Members.png'
 import GMap from '../../Assets/Images/Grow/Map.png'
 import GGraph from '../../Assets/Images/Grow/Graph.png'
 
-import Meta from '../../Assets/Images/Portfolio/Meta.png'
 
 
 //* CanadaGames
