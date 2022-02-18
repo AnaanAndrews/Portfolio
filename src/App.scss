@@ -55,10 +55,11 @@ html,body,#root {
     color: #eee;
     text-align: center;
     .title{
+      text-align: center;
       h1,h2{
 
         display: block;
-        width: 50vw;
+
         margin: 0 auto;
       }
       h1{
@@ -85,13 +86,15 @@ html,body,#root {
     }
     ul{
       list-style: none;
+      margin-left: 0;
+      padding-left: 0;
     }
     li{
       margin-top: 5vh;
       &.btn {
         margin-top: 10vh;
         a {
-          font-size: 30px;
+          font-size: 20px;
             color: #fff;
             font-weight: 600;
             background: #23232a;
@@ -573,7 +576,7 @@ section{
     font-size: 16px;
   }
   .title{
-
+    margin-left: 0;
     text-align: center;
     h2{
       font-weight: 300;
@@ -587,25 +590,30 @@ section{
     align-items: center;
     justify-content: center;
     .nav-links{
-      font-size: 22px;
+      font-size: 18px;
       margin-left: auto;
       text-align: center;
       flex-wrap: wrap;
+      input{
+        font-size: 18px;
+        
+      }
       ul{
-        width: 80%;
         margin: 0 auto;
         display: inline-block;
         text-align: center;
-        text-align: center;
+
       }
       li{
-        width: 20vw;
+          padding-left: 6vw;
         display:block;
         float: left;
         margin: 2vw 2vw 2vw 2vw;
         &.btn{
-          width: 100%;
-          margin: 3vh auto;
+          width: 80vw;
+          display: block;
+          margin: 5vh 0vw 0 0;
+          padding-right: 4vw;
         }
       }
       padding: 0px;

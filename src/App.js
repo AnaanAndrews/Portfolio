@@ -15,7 +15,7 @@ import state from './components/state.js';
 // Model;=
 import PineCan from './Assets/Models/Pineapplesoda.js' ;
 
-import Basket from './Assets/Models/DiscLowQual'
+import Basket from './Assets/Models/DiscExtremlyLowQuality.js'
 
 //Inersection Observer
 import {useInView} from 'react-intersection-observer';
@@ -219,7 +219,7 @@ function App() {
 
     <div className="scrollArea" ref={scrollArea} onScroll={onScroll}>
       <div style={{position: 'sticky', top:0}}ref={domContent}></div>
-      <div style={{width: `${100}%`, height: `${state.pages * (window.innerWidth >= 1000? 115: 136)}vh`}}></div>
+      <div style={{width: `${100}%`, height: `${state.pages * (window.innerWidth >= 1000? 113: 135)}vh`}}></div>
     </div>
     
     </>
