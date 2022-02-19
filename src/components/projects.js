@@ -52,7 +52,7 @@ return (
         <h3>Completed!</h3>
             <h2>Canada Summer Games Demo</h2>   
             <div className="Description">
-            <p>The Canada Summer Games demo project is an ASP.net MVC web application created as an opertunity to learn. The project's objective was to develop an application to manage multiple models with user autherentcation and roles and responsibilities.</p>
+            <p>The Canada Summer Games demo project is an ASP.net MVC web application created as an opportunity to learn. The project's objective was to develop an application to manage multiple models with user authentication and roles and responsibilities.</p>
             <p>Key features of the project include Image and Document upload and download, Auditing / Concurrency handling. User Roles and restrictions. Summary / Master-detail pages. Excel download and upload  </p>       
             </div>    
             <button className="Github-Button"  value="View on Github" onClick={() => setTimeout(()=> {window.open('https://github.com/AnaanAndrews/CanadaGames')},500)}>

@@ -167,8 +167,8 @@ function App() {
               <div  className='centered'>
               <h1 id="about" >About me</h1>
               <div className='Description'>
-              <p>I am a full-stack developer who is hunting to conquer new and exciting programming / design challenges. I’m always looking to expand my toolset by learning new technologies And then implementing them in unique ways.</p>
-              <p >Outside of programming, I enjoy spending my time creating and texturing 3D models with blender and substance painter and throwing discs into baskets in disc golf.</p>
+              <p>I am a full-stack developer who is hunting to conquer new and exciting programming / design challenges. I’m always looking to expand my toolset by learning new technologies and then implementing them in unique ways.</p>
+              <p > Outside of programming, I enjoy spending my time creating and texturing 3D models with blender and substance painter and playing Discgolf</p>
               </div>
             </div>
                 
@@ -226,7 +226,6 @@ function App() {
               
                   <a  href="./AnaanAndrewsResume.pdf" download='AnaanAndrewsResume.pdf'>Download Resume</a>
                 </li>
-               
                 </ul>
             </div>
             </div>
