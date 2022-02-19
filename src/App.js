@@ -3,7 +3,8 @@ import React, { Suspense,useRef, useEffect, useState} from 'react';
 //Components
 import { Canvas } from 'react-three-fiber';
 import { Section } from './components/section';
-import { Html, Environment} from '@react-three/drei';
+import { Html,useProgress, Environment} from '@react-three/drei';
+import { a, useTransition } from "@react-spring/web";
 //Html Elements
 
 import Title from './components/Title.js';
@@ -23,16 +24,7 @@ import {useInView} from 'react-intersection-observer';
 //Resume
 
 
-const Loading = ()=> {
 
-  return(
-  <>
-  <div>
-    <h1>WE BE LOADING</h1>
-  </div>
-  </>
-  )
-}
 
 const HtmlContent = ({domContent, children,groupPositionY, position, rotation, bgColor, scale, Model})=>{
   const model = useRef()
@@ -106,6 +98,24 @@ else return
 
 }
 
+function Loader() {
+  const { active, progress } = useProgress();
+  const transition = useTransition(active, {
+    from: { opacity: 1, progress: 0 },
+    leave: { opacity: 0 },
+    update: { progress },
+  });
+  return transition(
+    ({ progress, opacity }, active) =>
+      active && (
+        <a.div className='loading' style={{ opacity }}>
+          <div className='loading-bar-container'>
+            <a.div className='loading-bar' style={{ width: progress }}></a.div>
+          </div>
+        </a.div>
+      )
+  );
+}
 
 
 
@@ -113,12 +123,8 @@ else return
 function App() {
 
   //loading
-  const [loading,setLoading] = useState(false)
+  const [events] = useState();
 
-  useEffect(()=>{
-    setLoading(true)
-
-  }, [])
 
 
   //Scoll Section
@@ -135,7 +141,7 @@ function App() {
     <>
   
     <Canvas colorManagment camera={{position: [0,0,120], fov:70, rotation: [0,0,0]}} > 
-      <Suspense fallback={<h1>Meth</h1>}>
+      <Suspense fallback={null}>
         <Environment files="winter_evening_1k.hdr"/>
         {/* <Environment files="comfy_cafe_1k.hdr"/> */}
           <HtmlContent  
@@ -230,8 +236,9 @@ function App() {
     </Suspense>
 
     </Canvas>
+    <Loader/>
 
-    <div className="scrollArea" ref={scrollArea} onScroll={onScroll}>
+    <div className="scrollArea" ref={scrollArea} onScroll={onScroll} {...events}>
       <div style={{position: 'sticky', top:0}}ref={domContent}></div>
       <div style={{width: `${100}%`, height: `${state.pages * (window.innerWidth >= 1000? 113: 140)}vh`}}></div>
     </div>
