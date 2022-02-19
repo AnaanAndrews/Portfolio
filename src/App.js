@@ -1,5 +1,5 @@
 import './App.scss';
-import React, { Suspense,useRef, useEffect} from 'react';
+import React, { Suspense,useRef, useEffect, useState} from 'react';
 //Components
 import { Canvas } from 'react-three-fiber';
 import { Section } from './components/section';
@@ -13,7 +13,7 @@ import Projects from './components/projects.js';
 import state from './components/state.js';
 
 // Model;=
-import PineCan from './Assets/Models/LowQualCan.js' ;
+import PineCan from './Assets/Models/LowQualPineCan.js' ;
 
 import Basket from './Assets/Models/DiscExtremlyLowQuality.js'
 
@@ -23,7 +23,16 @@ import {useInView} from 'react-intersection-observer';
 //Resume
 
 
+const Loading = ()=> {
 
+  return(
+  <>
+  <div>
+    <h1>WE BE LOADING</h1>
+  </div>
+  </>
+  )
+}
 
 const HtmlContent = ({domContent, children,groupPositionY, position, rotation, bgColor, scale, Model})=>{
   const model = useRef()
@@ -56,7 +65,7 @@ const HtmlContent = ({domContent, children,groupPositionY, position, rotation, b
 
 
   window.addEventListener('resize', function() {
-    
+    if(model == null) return;
     model.current.position.x = PostionX(window.innerWidth, model.current.name)
     
   });
@@ -103,8 +112,13 @@ else return
 
 function App() {
 
-  //Resume View
+  //loading
+  const [loading,setLoading] = useState(false)
 
+  useEffect(()=>{
+    setLoading(true)
+
+  }, [])
 
 
   //Scoll Section
@@ -114,22 +128,22 @@ function App() {
 
   useEffect(() => void onScroll({target: scrollArea.current}), [])
 
-  console.log(scrollArea)
+ 
 
 
   return (
     <>
   
     <Canvas colorManagment camera={{position: [0,0,120], fov:70, rotation: [0,0,0]}} > 
-      <Suspense fallback={null}>
+      <Suspense fallback={<h1>Meth</h1>}>
         <Environment files="winter_evening_1k.hdr"/>
         {/* <Environment files="comfy_cafe_1k.hdr"/> */}
           <HtmlContent  
           domContent={domContent} 
           groupPositionY={370} 
-          position={[0,-25,0]} 
-          rotation={[.3,0,0]}
-          scale={3.5}
+          position={[0,window.innerWidth >= 1000? -25: -35,0]} 
+          rotation={[window.innerWidth >= 1000? .3: .2,0,0]}
+          scale={window.innerWidth >= 1000? 3.5: 4.5}
           bgColor={'#f15946'}
           Model={'can'}>
             <Title/>
@@ -179,7 +193,7 @@ function App() {
           </HtmlContent>
           <HtmlContent 
           domContent={domContent} 
-          groupPositionY={window.innerWidth >= 1000? -500: -740} 
+          groupPositionY={window.innerWidth >= 1000? -500: -790} 
           position={[0,-100,0]} 
           rotation={[1,0,0]}
           scale={3.5}
@@ -187,7 +201,7 @@ function App() {
           Model={'none'}>
           
             <div className='contact'>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f15946" fill-opacity="1" d="M0,224L48,208C96,192,192,160,288,138.7C384,117,480,107,576,128C672,149,768,203,864,218.7C960,235,1056,213,1152,186.7C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f15946" d="M0,224L48,208C96,192,192,160,288,138.7C384,117,480,107,576,128C672,149,768,203,864,218.7C960,235,1056,213,1152,186.7C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
             <div className="contact-info">
               <div className="title">
                 <h2>Like what you see?</h2>
@@ -202,11 +216,11 @@ function App() {
                 <h3>Mobile</h3>
                 <h2>(289)-501-9132</h2>
                 </li>
-                <li>
                 <li className="btn">
-                  <a href="/">View Resume</a>
+              
+                  <a  href="./AnaanAndrewsResume.pdf" download='AnaanAndrewsResume.pdf'>Download Resume</a>
                 </li>
-                </li>
+               
                 </ul>
             </div>
             </div>
@@ -219,7 +233,7 @@ function App() {
 
     <div className="scrollArea" ref={scrollArea} onScroll={onScroll}>
       <div style={{position: 'sticky', top:0}}ref={domContent}></div>
-      <div style={{width: `${100}%`, height: `${state.pages * (window.innerWidth >= 1000? 113: 135)}vh`}}></div>
+      <div style={{width: `${100}%`, height: `${state.pages * (window.innerWidth >= 1000? 113: 140)}vh`}}></div>
     </div>
     
     </>

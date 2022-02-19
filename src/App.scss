@@ -1,8 +1,17 @@
-$Primary: #f15946;
 
+
+
+
+
+
+
+/*#region Main*/
+$Primary: #f15946;
 
 * {
   box-sizing: border-box;
+  cursor: default;
+  
 }
 
 body {
@@ -311,6 +320,7 @@ section{
 }
 
 .Project{
+  
   height: 30vh;
   width: 100%;
   display: flex;
@@ -324,10 +334,87 @@ section{
       font-style: oblique;
       font-weight: 500;
     }
+    button:after {
+      content: "";
+      display: block;
+      position: absolute;
+      border-radius: 6px;
+      left: 0;
+      top:0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: all 0.5s;
+      box-shadow: 0 0 16px 16px #F1AF46;
+    }
+    
+    button:active:after {
+      box-shadow: 0 0 0 0 #f15946;
+      position: absolute;
+      border-radius: 6px;
+      left: 0;
+      top:0;
+      opacity: 1;
+      transition: 0s;
+    }
+    
+    button:active {
+      top: 1px;
+    }
+    
+    button:hover{
+      background-color: #444; 
+      cursor: pointer;
+
+    
+  }
+  p{
+    font-weight: 300;
+  }
+  .Github-Button{
+      
+    cursor: pointer;
+    position: relative;
+    left: 30%;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 2vh;
+    padding: 0 24px;
+    border-radius: 6px;
+    transform: translateX(-50%);
+    background-color: transparent;
+    border: $Primary 2px solid;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    img{
+    position: relative;
+    cursor: pointer;
+    top: 50%;
+    height: 50px;
+    left: -10%;
+    transform: translateY(5%);
+      z-index: 2;
+      background-color: transparent;
+    }
+ 
+    p{
+      position: relative;
+      cursor: pointer;
+      font-size: 18px;
+      float: right;
+      color: #fff;
+      font-weight: 300;
+    }
+}
   }
 }
+  
+/*#endregion */
+
+ 
 
 
+/*#region Media 1440*/
 
 
 @media (max-width: 1440px){
@@ -351,7 +438,9 @@ section{
   }
   
 }
+/*#endregion */
 
+/*#region Media 1000*/
 @media (max-width: 1000px){
 
   h1{
@@ -367,42 +456,32 @@ section{
     font-size: 18px;
   }
   .title{
-
+    margin: 0;
     text-align: center;
     h2{
       font-weight: 300;
-      margin-top: 0;
-      padding-top: 0;
     }
   }
   .leftcontainer{
-
     width: 100%;
-    align-items: center;
-    justify-content: center;
     .nav-links{
-      font-size: 22px;
-      margin-left: auto;
-      text-align: center;
-      flex-wrap: wrap;
+      font-size: 26px;
       ul{
-        width: 50%;
+       height: 20vh;
+        width: 60%;
         margin: 0 auto;
-        display: inline-block;
-        text-align: center;
+        display: block;
         text-align: center;
       }
       li{
-        width: 10vw;
-        display:block;
+        margin: 0;
+        width: 33%;
         float: left;
-        margin:  2vw;
         &.btn{
           width: 100%;
-          margin: 3vw auto;
+          margin: 6vh auto;
         }
       }
-      padding: 0px;
     }
   }
   .centered{
@@ -455,7 +534,9 @@ section{
     }
   }
 }
+/*#endregion */
 
+/*#region Media  800*/
 @media (max-width: 800px){
 
   h1{
@@ -470,104 +551,43 @@ section{
   p{
     font-size: 18px;
   }
-  .title{
-
-    text-align: center;
-    h2{
-      font-weight: 300;
-      margin-top: 1vh;
-      padding-top: 0;
-    }
-  }
   .leftcontainer{
-
-    width: 100%;
-    align-items: center;
-    justify-content: center;
     .nav-links{
-      font-size: 22px;
-      margin-left: auto;
-      text-align: center;
-      flex-wrap: wrap;
-      ul{
-        width: 80%;
-        margin: 0 auto;
-        display: inline-block;
-        text-align: center;
-        text-align: center;
+      input{
+        font-size: 18px;
       }
-      li{
-        width: 20vw;
-        display:block;
-        float: left;
-        margin: 2vw 2vw 2vw 2vw;
-        &.btn{
-          width: 100%;
-          margin: 3vh auto;
-        }
-      }
-      padding: 0px;
     }
   }
+ 
+}
+/*#endregion */
+
+/*#region Media 470*/
+@media (max-width: 600px){
   .centered{
-    margin-top: 5vh;
-    margin-left: 0;
-    padding-left: 10%;
-    width: 90%;
-    text-align: center;
+    margin-top: 10vh;
     .Description{
-      background-color: rgba($color: #000000, $alpha: 0.5);
       p{
         font-size: 18px;
       }
     }
   }
-  .top{
-
-    width: 90%;
-    h2{
-      margin-bottom: 0;
+  .Project{
+    .Description{
+      margin-top: 4vh;
+      p{
+        font-size: 16px;
+        font-weight: 300;
+      }
+      
     }
-    .Project{
-      width: 100%;
-      display: table-row;
-      height: 66vh;
-      .Title{
-        h3{
-          margin-top: 10vh;
-          float: left;
-        }
-      }
-      .Description{
-        width: 86vw;
-        p{
-          font-size: 16px;
-        }
-      }
-      .ImageDisplay{
-        margin-left: 0vh;
-        background-color: transparent;
-        img{
-          padding-bottom: 0vh;
-          margin: 7vh 0;
-          float: left;
-        }
-      }
-    }
- 
-
   }
-}
-
-
-
-@media (max-width: 470px){
-
   h1{
-    font-size: 50px;
+    font-size: 40px;
   }
   h2{
-    font-size: 24px;
+    
+    font-size: 22px;
   }
   h3{
     font-size: 18px;
@@ -575,103 +595,48 @@ section{
   p{
     font-size: 16px;
   }
-  .title{
-    margin-left: 0;
-    text-align: center;
-    h2{
-      font-weight: 300;
-      margin-top: 1vh;
-      padding-top: 0;
-    }
-  }
   .leftcontainer{
-
-    width: 100%;
-    align-items: center;
-    justify-content: center;
+    h2{
+      margin-top: 1.5vh;
+    }
     .nav-links{
-      font-size: 18px;
-      margin-left: auto;
-      text-align: center;
-      flex-wrap: wrap;
-      input{
-        font-size: 18px;
-        
-      }
       ul{
-        margin: 0 auto;
-        display: inline-block;
-        text-align: center;
-
+        width: 100vw;
+      }
+      input{
+        font-size: 20px;
       }
       li{
-          padding-left: 6vw;
-        display:block;
-        float: left;
-        margin: 2vw 2vw 2vw 2vw;
         &.btn{
-          width: 80vw;
-          display: block;
-          margin: 5vh 0vw 0 0;
-          padding-right: 4vw;
+          margin: 4vh auto;
         }
       }
-      padding: 0px;
+      a{
+        font-size: 20px;
+      }
     }
+
+  
   }
-  .centered{
-    margin-top: 5vh;
-    margin-left: 0;
-    padding-left: 10%;
-    width: 90%;
-    text-align: center;
-    .Description{
-      background-color: rgba($color: #000000, $alpha: 0.5);
+
+  .Project{
+    .Title{
+    .Github-Button{
+      left: 50%;
+      transform: translateX(-50%);   
       p{
-        font-size: 18px;
+        font-size: 16px;
       }
+      img{
+        height: 46px;
+      }
+  }
     }
   }
-  .top{
+    
 
-    width: 90%;
-    h2{
-      margin-bottom: 0;
-    }
-    .Project{
-      width: 100%;
-      display: table-row;
-      height: 66vh;
-      .Title{
-        h3{
-          margin-top: 10vh;
-          float: left;
-        }
-      }
-      .Description{
-        width: 86vw;
-        p{
-          font-size: 16px;
-        }
-      }
-      .ImageDisplay{
-        margin-top: 7vh;
-        padding-bottom: 10vh;
-        margin-left: 0vh;
-        background-color: transparent;
-        border-bottom: #f15946 solid 2px;
-        img{
-          padding-bottom: 0vh;
-          margin: 0vh 0;
-          float: left;
-        }
-      }
-    }
- 
-
-  }
 }
-
+/*#endregion */
 
 .all-page-container {
   height: 100%;

@@ -27,7 +27,8 @@ const Carousel = ({images})=> {
         <input type="button" className="carousel-btn right"value="&#8250;" onClick={() => increment(1)}/>
         <div className="carousel" ref={carousel}>
             {images.map((img, idx) => (<div className="carousel-item">
-                <img src={Object.values(img.src)[0]} alt={img.alt} key={idx}></img>
+                <img src={Object.values(img.src)[0]} alt={img.alt} key={img.key}></img>
+                
             </div>))}
         </div>
     </div>
