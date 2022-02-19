@@ -199,7 +199,7 @@ function App() {
           </HtmlContent>
           <HtmlContent 
           domContent={domContent} 
-          groupPositionY={window.innerWidth >= 1000? -500: -790} 
+          groupPositionY={window.innerWidth >= 1000? -500: -810} 
           position={[0,-100,0]} 
           rotation={[1,0,0]}
           scale={3.5}
@@ -240,7 +240,7 @@ function App() {
 
     <div className="scrollArea" ref={scrollArea} onScroll={onScroll} {...events}>
       <div style={{position: 'sticky', top:0}}ref={domContent}></div>
-      <div style={{width: `${100}%`, height: `${state.pages * (window.innerWidth >= 1000? 113: 140)}vh`}}></div>
+      <div style={{width: `${100}%`, height: `${state.pages * (window.innerWidth >= 1000? 113: 150)}vh`}}></div>
     </div>
     
     </>
