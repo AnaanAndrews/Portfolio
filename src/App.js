@@ -199,7 +199,7 @@ function App() {
           </HtmlContent>
           <HtmlContent 
           domContent={domContent} 
-          groupPositionY={window.innerWidth >= 1000? -500: -810} 
+          groupPositionY={window.innerWidth >= 1000? -500: -890} 
           position={[0,-100,0]} 
           rotation={[1,0,0]}
           scale={3.5}
