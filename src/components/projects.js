@@ -17,6 +17,7 @@ export default function Projects() {
 				title={"Qaunt's Query"}
 				link={"https://quantsquery.com/"}
 				imgData={"qq"}
+				live={true}
 				prop={
 					<>
 						<p className="body-text white-text mt0">
@@ -38,7 +39,7 @@ export default function Projects() {
 				title={"This Portfolio"}
 				link={"https://github.com/AnaanAndrews/Portfolio"}
 				imgData={"port"}
-                live={true}
+      
 				prop={
 					<>
 						<p className="body-text white-text mt0">
