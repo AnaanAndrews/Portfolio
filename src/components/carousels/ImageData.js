@@ -8,7 +8,7 @@ import GPos  from '../../Assets/Images/Grow/GrowPOS.PNG'
 import GHouseDetails1  from '../../Assets/Images/Grow/HouseDetails1.PNG'
 import GHouseDetails2  from '../../Assets/Images/Grow/HouseDetails2.PNG'
 import GHouseIndex  from '../../Assets/Images/Grow/houseIndex.png'
-import GMap  from '../../Assets/Images/Grow/GrowMap.PNG'
+// import GMap  from '../../Assets/Images/Grow/GrowMap.PNG'
 
 
 //Portfolio
@@ -34,11 +34,11 @@ export const ImageData = type =>{
             src: {Ghome},
             alt: "Picture of Grow community members outside the Grow center"
             },
-            {
-                key: "G2",
-                src: {GMap},
-                alt: "webpage displaying map of all client households as well as nearest grocery stores"
-                },
+            // {
+            //     key: "G2",
+            //     src: {GMap},
+            //     alt: "webpage displaying map of all client households as well as nearest grocery stores"
+            //     },
             {
             key: "G3",
             src: {GHouseDetails1},
