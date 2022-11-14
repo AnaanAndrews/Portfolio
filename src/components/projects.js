@@ -1,69 +1,86 @@
 import React from "react";
-import Carousel from './carousels/Carousel';
-import {ImageData} from './carousels/ImageData'
-import Meta from '../Assets/Images/Portfolio/Meta.png'
-import GithubIcon from '../Assets/svg/github.svg'
 
+import Project from "./project";
 export default function Projects() {
-return (
-    <div  className='top'>
-    <h1 >Projects</h1>
-    <h2 >Cool things I've Created!</h2>
-    <div className="Project">
-        <div className="Title">
-            <h3 >In Development</h3>
-            <h2>Grow Community Project</h2>   
-            <div className="Description">
-            <p>The GROW community project is an ASP.net MVC web application in development for the GROW community food literacy center. I am currently working on its development alongside four other team members.</p>
-            <p> The objective of the application is to create a member management system and a point of sales system to replace their current pen and paper systems. My scope for the project is the implementation of the google maps API for place auto-completion and map reports of their members. </p>   
-            </div>        
-       
-            <button className="Github-Button"  value="View on Github" onClick={() => setTimeout(()=> {window.open('https://github.com/samarthharjai/PinewoodGrow')},500)}>
+	// const projectState = 'In Development'
+	// const title = 'Grow Community Project'
+	// const p1 =  'The GROW community project is an ASP.net MVC web application in development for the GROW community food literacy center. I am currently working on its development alongside four other team members.';
+	// const p2 = 'The objective of the application is to create a member management system and a point of sales system to replace their current pen and paper systems. My scope for the project is the implementation of the google maps API for place auto-completion and map reports of their members.';
 
-            <img alt=""  src={GithubIcon}/>
-            <p>View On Github</p>
-            </button>      
-            
-        </div>
-            <div className="ImageDisplay">
-                {/* <img src={GrowMap}/> */}
-                <Carousel images={ImageData('grow')} />
-            </div>
-        </div>
-    <div className="Project">
-        <div className="Title">
-            <h3>Meta</h3>
-            <h2>This Portfolio</h2>   
-            <div className="Description">
-            <p>This portfolio was created with React three fiber and three.js. The project's objective was to create a visually appealing website and serve as an excuse to display some of my models.</p>
-            <p>During development, the main difficulties were the lighting and HTML scrolling behaviours in a canvas element. How I overcame, these problems can be seen in the source code below. Ultimately, creating this website was a fun challenge and a good learning experience.</p>       
-            </div>       
-            <button className="Github-Button"  value="View on Github" onClick={() => setTimeout(()=> {window.open('https://github.com/AnaanAndrews/Portfolio')},500)}>
-            <img alt="" src={GithubIcon}/>
-            <p>View On Github</p>
-            </button>                    
-        </div>
-        <div className="ImageDisplay">
-            <img src={Meta} alt='Screen capture of this portfolio page, repeated'/>       
-        </div>
-    </div>
-    <div className="Project">
-        <div className="Title">
-        <h3>Completed!</h3>
-            <h2>Canada Summer Games Demo</h2>   
-            <div className="Description">
-            <p>The Canada Summer Games demo project is an ASP.net MVC web application created as an opportunity to learn. The project's objective was to develop an application to manage multiple models with user authentication and roles and responsibilities.</p>
-            <p>Key features of the project include Image and Document upload and download, Auditing / Concurrency handling. User Roles and restrictions. Summary / Master-detail pages. Excel download and upload  </p>       
-            </div>    
-            <button className="Github-Button"  value="View on Github" onClick={() => setTimeout(()=> {window.open('https://github.com/AnaanAndrews/CanadaGames')},500)}>
-            <img alt=""  src={GithubIcon}/>
-            <p>View On Github</p>
-            </button>                               
-        </div>
-        
-    <div className="ImageDisplay">
-    <Carousel images={ImageData('cg')} />
-</div>
-    </div>
-  </div>
-)};
+	return (
+		<div className="project-wrapper">
+			<h1 className="title-text text-light primary-text ma0 tma0">Projects</h1>
+			<h2 className="subtitle-text white-text text-bold mt0 mb5 ">Cool things I've Created!</h2>
+
+			<Project
+				projectState={"In Development"}
+				title={"Qaunt's Query"}
+				link={"https://quantsquery.com/"}
+				imgData={"qq"}
+				prop={
+					<>
+						<p className="body-text white-text mt0">
+							Quant’s Query is a soon-to-be stock analysis program I’m working on alongside my friend{" "}
+							<a className="body-text white-text" target="_blank" rel="noreferrer" href={"https://www.markjps.com/"}>
+								Mark
+							</a>
+							. The website is built using Next.js with typescript and is currently hosted using AWS.
+						</p>
+						<p className="body-text white-text">
+							The current features of the project are a dynamic layout, sign-in/up modals, light / dark mode and a apex
+							candle stick chart placeholder. There's still so much work to do, but I am excited to see this project grow.
+						</p>
+					</>
+				}></Project>
+
+			<Project
+				projectState={"Meta"}
+				title={"This Portfolio"}
+				link={"https://github.com/AnaanAndrews/Portfolio"}
+				imgData={"port"}
+                live={true}
+				prop={
+					<>
+						<p className="body-text white-text mt0">
+							This portfolio was created with React and three.js. For the design, I wanted to challenge myself to push how I use the available screen space;
+							I wanted everything to be BIG.
+						</p>
+						<p className="body-text white-text">
+							During development, the main difficulties I faced were the HTML portal scrolling behaviours in the canvas and
+							the model lighting. 
+						</p>
+
+						<p className="body-text white-text">
+					        I feel as if I’ve only scratched the surface of three.js
+							and what is capable of. I look forward to continuing to create exciting things with React and three.js
+						</p>
+					</>
+				}></Project>
+
+			<Project
+				projectState={"Completed"}
+				title={"Grow Community Project"}
+				link={"https://github.com/samarthharjai/PinewoodGrow"}
+				imgData={"grow"}
+				prop={
+					<>
+						<p className="body-text white-text mt0">
+							While at Niagara College I had the privilege to work directly within our community helping design and build a
+							web application for GROW Community Foood Literacy Center.
+						</p>
+						<p className="body-text white-text">
+							The objective of the application is to create a member management system and a point of sales system to replace
+							their current pen and paper systems. The app was built utilizing ASP.Net core, bootstrap, google maps, SQLite
+							and a bit of jquery.
+						</p>
+
+						{/* <p className="body-text white-text">
+							My favourite feature of this project is the map report, which provides a visual breakdown of where their
+							clients and their travel times to GROW and their nearest grocery store.
+						</p> */}
+					</>
+				}></Project>
+
+		</div>
+	);
+}

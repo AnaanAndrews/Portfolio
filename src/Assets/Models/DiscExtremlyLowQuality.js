@@ -10,46 +10,21 @@ export default function Model({ ...props }) {
   const { nodes, materials } = useGLTF('/DiscExtremlyLowQuality.glb')
   return (
     <group ref={group} {...props} dispose={null}>
-      <mesh geometry={nodes.Pole.geometry} material={materials.Pole} position={[-3.78, 1.49, 0]}>
-        <mesh geometry={nodes.BaasketRod1.geometry} material={nodes.BaasketRod1.material} position={[0, -0.36, 0]} />
-        <mesh
-          geometry={nodes.InnerChain.geometry}
-          material={nodes.InnerChain.material}
-          position={[0, -0.28, 0]}
-          rotation={[0, 0.26, 0]}
-        />
-        <mesh
-          geometry={nodes.InnerRingHold.geometry}
-          material={nodes.InnerRingHold.material}
-          position={[0, -0.21, 0]}
-          scale={[0.88, 0.49, 0.93]}
-        />
-        <mesh geometry={nodes.OuterChain.geometry} material={nodes.OuterChain.material} position={[0, -0.28, 0]} />
-        <mesh
-          geometry={nodes.OuterRingHold.geometry}
-          material={nodes.OuterRingHold.material}
-          position={[0, -0.26, 0]}
-          scale={[0.8, 0.66, 0.8]}
-        />
-        <mesh geometry={nodes.Rim1.geometry} material={nodes.Rim1.material} position={[0, -0.36, 0]} />
-        <mesh geometry={nodes.Rim2.geometry} material={nodes.Rim2.material} position={[0, -0.35, 0]} />
-        <mesh geometry={nodes.Rim3.geometry} material={nodes.Rim3.material} position={[0, -0.18, 0]} />
-        <mesh geometry={nodes.Rim4.geometry} material={nodes.Rim4.material} position={[0, -0.28, 0]} />
-        <mesh
-          geometry={nodes.TopRim.geometry}
-          material={materials['TopRim.001']}
-          position={[0, 0.34, 0]}
-          scale={[0.13, 0.17, 0.13]}
-        />
-        <mesh geometry={nodes.TopRing.geometry} material={nodes.TopRing.material} position={[0, 0.31, 0]} />
-        <mesh geometry={nodes.TopRing2.geometry} material={nodes.TopRing2.material} position={[0, 0.31, 0]} />
-        <mesh
-          geometry={nodes.TopRing3.geometry}
-          material={nodes.TopRing3.material}
-          position={[0, 0.29, 0]}
-          scale={[1, 1.16, 1]}
-        />
-        <mesh geometry={nodes.Torus002.geometry} material={nodes.Torus002.material} position={[0, 0.31, 0]} />
+      <mesh geometry={nodes.Pole.geometry} material={materials.Pole}>
+        <mesh geometry={nodes.BaasketRod1.geometry} material={materials.Basket} position={[0, -0.36, 0]} />
+        <mesh geometry={nodes.InnerChain.geometry} material={materials['Full Chain']} position={[0, -0.28, 0]} rotation={[0, 0.26, 0]} />
+        <mesh geometry={nodes.InnerRingHold.geometry} material={materials.Basket} position={[0, -0.21, 0]} scale={[0.88, 0.49, 0.93]} />
+        <mesh geometry={nodes.OuterChain.geometry} material={materials['Full Chain']} position={[0, -0.28, 0]} />
+        <mesh geometry={nodes.OuterRingHold.geometry} material={materials.Basket} position={[0, -0.26, 0]} scale={[0.8, 0.66, 0.8]} />
+        <mesh geometry={nodes.Rim1.geometry} material={materials.Basket} position={[0, -0.36, 0]} />
+        <mesh geometry={nodes.Rim2.geometry} material={materials.Basket} position={[0, -0.35, 0]} />
+        <mesh geometry={nodes.Rim3.geometry} material={materials.Basket} position={[0, -0.18, 0]} />
+        <mesh geometry={nodes.Rim4.geometry} material={materials.Basket} position={[0, -0.28, 0]} />
+        <mesh geometry={nodes.TopRim.geometry} material={materials['TopRim.001']} position={[0, 0.34, 0]} scale={[0.13, 0.17, 0.13]} />
+        <mesh geometry={nodes.TopRing.geometry} material={materials.TopRing} position={[0, 0.31, 0]} />
+        <mesh geometry={nodes.TopRing2.geometry} material={materials.TopRing} position={[0, 0.31, 0]} />
+        <mesh geometry={nodes.TopRing3.geometry} material={materials.TopRing} position={[0, 0.29, 0]} scale={[1, 1.16, 1]} />
+        <mesh geometry={nodes.Torus002.geometry} material={materials.TopRing} position={[0, 0.31, 0]} />
       </mesh>
     </group>
   )

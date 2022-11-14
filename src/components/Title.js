@@ -7,32 +7,32 @@ function Title() {
 return (
     <>
      {/* window[`scrollTo`]({top: 0, behavior:`smooth`}) */}
-    <div className='leftcontainer'>
-    <div className='title'>
-    <h1> Hi, Im Anaan. </h1> 
-    <h2 >I design &#38; build user interfaces</h2>
-    </div>
+    <div className='section-wrapper mbottom pb25'>
+    <div className='section-container'>
+    <h1 className='main-title-text white-text mtext-center ma0' > Hi, Im Anaan. </h1> 
+    <h2 className='subtitle-text white-text mtext-center ma0'>I design &#38; build user interfaces</h2>
+
     <div className="nav-links">
     <nav>
         <ul>
-        <li>
+        <li className="nav-link">
         <input type="button" onClick={() => document.getElementById('about').scrollIntoView({behavior: "smooth", block: "center"})} value="About Me"/>
         </li>
-        <li>
+        <li className="nav-link">
         <input type="button" onClick={() => document.getElementById('project').scrollIntoView({behavior: "smooth", block: "nearest"})} value="Projects"/>
         </li>
-        <li>
+        <li className="nav-link">
         <input type="button" onClick={() => document.getElementById('contact').scrollIntoView({behavior: "smooth", block: "center"})} value="Contact"/>
         </li>
-        <li className="btn">
-            <a href="./AnaanAndrewsResume.pdf" download='AnaanAndrewsResume.pdf'>Resume</a>
+        <li className="nav-link">
+            <a className="nav-link-btn" href="./AnaanAndrewsResume.pdf" download='AnaanAndrewsResume.pdf'>Resume</a>
         {/* <input type="button" onClick={MoveTo} value="Resume"/> */}
         </li>
         </ul>
     </nav>
     </div>
     </div>
-
+    </div>
     </>
 	);
 }export default Title 

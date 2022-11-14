@@ -1,9 +1,71 @@
+
+.carousel-pagination{
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    align-items: center;
+}
+.carousel-page-btn{
+    font-size: 0;
+    background-color: rgba(255,255,255,.3);
+    border: 1px solid rgba(255,255,255,.3);
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+ 
+    margin-inline: 10px;
+
+    &:hover{
+
+        background-color: rgba(255,255,255,1);
+        border: 1px solid rgba(255,255,255,1);
+        cursor: pointer;
+    }
+    &[active-index="true"] {
+
+
+        background-color: rgba(255,255,255,.6);
+        border: 1px solid rgba(255,255,255,1);
+    
+
+    
+}
+
+    
+}
+
+.carousel-page-btn 
+
+
+.carousel-page-btn{
+
+    background-color: rgba(255,255,255,.5);
+    border: 1px solid rgba(255,255,255,.3);
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+ 
+    margin-inline: 10px;
+
+    &:hover{
+
+        background-color: rgba(255,255,255,.7);
+        border: 1px solid rgba(255,255,255,1);
+        cursor: pointer;
+    }
+
+    
+}
+
 .carousel-container{
+    aspect-ratio: 16 / 9;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 40px);
     display: flex;
     position: relative;
+
 .carousel{
+    background-color: #373737;
     display: flex;
     width: 100%;
     height: 100%;
@@ -17,15 +79,17 @@
         flex: 1 0 100%;
         scroll-snap-align: start;
         img{
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
+            aspect-ratio: 16 / 9;
+       
+            object-fit: contain;
         }
     }
 
 }
 
 .carousel-btn{
+
+    
     height: 30px;
     width: 30px;
     position: absolute;
@@ -62,7 +126,7 @@
 
   :hover, :focus{
         color: #fff;
-        background-color: rgba(0,0,0,.5);
+       
         
     }   
     :focus{

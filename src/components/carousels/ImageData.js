@@ -1,67 +1,113 @@
 //* Grow Project Images
 
 import Ghome from '../../Assets/Images/Grow/Home.png'
-import GMembers from '../../Assets/Images/Grow/Members.png'
-import GMap from '../../Assets/Images/Grow/Map.png'
-import GGraph from '../../Assets/Images/Grow/Graph.png'
 
 
 
-//* CanadaGames
-import CGHome from '../../Assets/Images/CanadaGames/CGHome.png'
-import CGAccount from '../../Assets/Images/CanadaGames/CGAccount.png'
-import CGAthletes from '../../Assets/Images/CanadaGames/CGAthletes.png'
-import CGLookup from '../../Assets/Images/CanadaGames/CGLookup.png'
+import GPos  from '../../Assets/Images/Grow/GrowPOS.PNG'
+import GHouseDetails1  from '../../Assets/Images/Grow/HouseDetails1.PNG'
+import GHouseDetails2  from '../../Assets/Images/Grow/HouseDetails2.PNG'
+import GHouseIndex  from '../../Assets/Images/Grow/houseIndex.png'
+import GMap  from '../../Assets/Images/Grow/Map.PNG'
+
+
+//Portfolio
+import PPineSoda from '../../Assets/Images/Portfolio/PineSoda2.jpg'
+import PBasketBlend from '../../Assets/Images/Portfolio/Basketblend.jpg'
+import PCanBlend from '../../Assets/Images/Portfolio/CanBlend.jpg'
+import Updatedbasket from '../../Assets/Images/Portfolio/UpdatedBasket.jpg'
+
+
+//
+
+import QDarkMain from '../../Assets/Images/QQ/DarkMain.PNG'
+import QDarkSignUp from '../../Assets/Images/QQ/DarkSignup.PNG'
+import QLightMain from '../../Assets/Images/QQ/LightMain.PNG'
+
+
 
 export const ImageData = type =>{
     if (type === 'grow'){
         return  [
             {
-            key: 1,
+            key: "G1",
             src: {Ghome},
             alt: "Picture of Grow community members outside the Grow center"
             },
             {
-            key: 2,
-            src: {GMembers},
-            alt: "Webpage displaying a list of members"
+                key: "G2",
+                src: {GMap},
+                alt: "webpage displaying map of all client households as well as nearest grocery stores"
+                },
+            {
+            key: "G3",
+            src: {GHouseDetails1},
+            alt: "Webpage displaying household details page"
             },
             {   
-            key: 3,
-            src: {GMap},
-            alt: "A Map displaying location of all members by income range"    
+            key: "G4",
+            src: {GHouseDetails2},
+            alt: "Webpage displaying household details page pt2"    
             },
             {   
-            key: 4,
-            src: {GGraph},
-            alt: "a bar graph income report of number of members by income"    
-            }
+            key: "G5",
+            src: {GHouseIndex},
+            alt: "webpage displaying list of members"    
+            },
+            {   
+                key: "G6",
+                src: {GPos},
+                alt: "a webpage point of sales system"    
+                }
         ]
     }
-    else if (type === 'cg'){
+    if (type === 'port'){
         return  [
+            {   
+                key: "p1",
+            src: {PCanBlend},
+            alt: "Screenshot of blender design for Pinesoda can"    
+            },
             {
-            key: 5,
-            src: {CGHome},
-            alt: "landing page for Canada Summer games"
+            key: "p2",
+            src: {PPineSoda},
+            alt: "Render of a Pine - apple Soda Can"
+            },
+            {
+                key: "p3",
+            src: {PBasketBlend},
+            alt: "Screenshot of blender design for disc golf basket can"    
             },
             { 
-            key: 6,
-            src: {CGAthletes},
-            alt: "Webpage displaying a list of athletes"    
+                key: "p4",
+            src: {Updatedbasket},
+            alt: "Render of a disc golf basket"
             },
-            {   
-            key: 7,
-            src: {CGLookup},
-            alt: "Webpage displaying a lookup management tables"    
-            },
-            {
-            key: 8,
-            src: {CGAccount},
-            alt: "Webpage showcases account management"
-            },
+ 
+      
         ]
     }
+    if (type === 'qq'){
+        return  [
+            {
+            key: "Q1",
+            src: {QDarkMain},
+            alt: "Screen shot of Quants query website in darkmode"
+            },
+            { 
+                key: "Q2",
+            src: {QDarkSignUp},
+            alt: "Screen shot of Quants query website signup form"
+            },
+            {   
+                key: "Q3",
+            src: {QLightMain},
+            alt: "Screen shot of Quants query website in Light mode"    
+            },
+
+        ]
+    }
+
 }
 
 

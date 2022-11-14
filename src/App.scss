@@ -14,6 +14,7 @@ $Primary: #f15946;
   
 }
 
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
 "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -123,7 +124,7 @@ html,body,#root {
     display: inline-block;
     margin-top: 0;
     width: 100vw;
-    height: 90vh;
+    height: 200vh;
       background-color: #f15946;
     }
 }
@@ -191,7 +192,7 @@ html,body,#root {
 
 
 .top{
-  width: 100vh;
+  width: 100vw;
   margin: 0 auto 90vh auto;
   text-align: center;
 
@@ -262,158 +263,66 @@ section{
   background-position: center;
 }
 
-.nav-links{
-  margin-top: 4vh;
-  font-size: 20px;
-  nav {
-    ul {
-        margin: 0;
-        padding: 0;
-        display: flex;
-    li {
-      input{
-        background: none;
-        border: none;
-        cursor: pointer;
-        color: #fff;
-        font-size: 24px;
-        font-family: 600;
-        padding:  0px;
-      }
-        list-style: none;
-        margin: 0 30px;
-        &.btn {
-        a {
-            color: #fff;
-            font-weight: 600;
-            background: #23232a;
-            padding: 16px 24px;
-            border-radius: 10px;
-            margin-top: 20vh;
-        }
-        }
-        a {
-          text-decoration: none;
-            text-transform: capitalize; 
-            color: #fff;
-        }
-        }
-    }
-}
-}
+// .nav-links{
+//   margin-top: 4vh;
+//   font-size: 20px;
+//   nav {
+//     ul {
+//         margin: 0;
+//         padding: 0;
+//         display: flex;
+//     li {
+//       input{
+//         background: none;
+//         border: none;
+//         cursor: pointer;
+//         color: #fff;
+//         font-size: 24px;
+//         font-family: 600;
+//         padding:  0px;
+//       }
+//         list-style: none;
+//         margin: 0 30px;
+//         &.btn {
+//         a {
+//             color: #fff;
+//             font-weight: 600;
+//             background: #23232a;
+//             padding: 16px 24px;
+//             border-radius: 10px;
+//             margin-top: 20vh;
+//         }
+//         }
+//         a {
+//           text-decoration: none;
+//             text-transform: capitalize; 
+//             color: #fff;
+//         }
+//         }
+//     }
+// }
+// }
 .Description{
   border-left: solid $Primary 4px;
   padding-left: 10px;
   margin-left: 2%;
 }
 
-.ImageDisplay{
-  margin-left: 10vh;
-  width: 50%;
-  background-color: #f15946;
-  border-bottom: #f15946 solid 2px;
-  
-  img{
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
+// .ImageDisplay{
 
-.Project{
+//   width: 100%;
+//   background-color: #f15946;
+//   border-bottom: #f15946 solid 2px;
   
-  height: 30vh;
-  width: 100%;
-  display: flex;
-  margin-top: 10vh;
-  .Title{
-    width: 40%;
-    text-align: left;
-    h3{
-      margin-bottom: 0;
-      color: $Primary;
-      font-style: oblique;
-      font-weight: 500;
-    }
-    button:after {
-      content: "";
-      display: block;
-      position: absolute;
-      border-radius: 6px;
-      left: 0;
-      top:0;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      transition: all 0.5s;
-      box-shadow: 0 0 16px 16px #F1AF46;
-    }
-    
-    button:active:after {
-      box-shadow: 0 0 0 0 #f15946;
-      position: absolute;
-      border-radius: 6px;
-      left: 0;
-      top:0;
-      opacity: 1;
-      transition: 0s;
-    }
-    
-    button:active {
-      top: 1px;
-    }
-    
-    button:hover{
-      background-color: #444; 
-      cursor: pointer;
+//   img{
+//     display: block;
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+//   }
+// }
 
-    
-  }
-  p{
-    font-weight: 300;
-  }
-  .Github-Button{
-      
-    cursor: pointer;
-    position: relative;
-    left: 30%;
-    display: inline-block;
-    font-size: 16px;
-    margin-top: 2vh;
-    padding: 0 24px;
-    border-radius: 6px;
-    transform: translateX(-50%);
-    background-color: transparent;
-    border: $Primary 2px solid;
-    transition-duration: 0.4s;
-    -webkit-transition-duration: 0.4s;
-    img{
-    position: relative;
-    cursor: pointer;
-    top: 50%;
-    height: 50px;
-    left: -10%;
-    transform: translateY(5%);
-      z-index: 2;
-      background-color: transparent;
-    }
- 
-    p{
-      position: relative;
-      cursor: pointer;
-      font-size: 18px;
-      float: right;
-      color: #fff;
-      font-weight: 300;
-    }
-}
-  }
-}
-  
-/*#endregion */
 
- 
 
 
 /*#region Media 1440*/
@@ -445,122 +354,15 @@ section{
 /*#region Media 1000*/
 @media (max-width: 1000px){
 
-  h1{
-    font-size: 74px;
-  }
-  h2{
-    font-size: 40px;
-  }
-  h3{
-    font-size: 30px;
-  }
-  p{
-    font-size: 18px;
-  }
-  .title{
-    margin: 0;
-    text-align: center;
-    h2{
-      font-weight: 300;
-    }
-  }
-  .leftcontainer{
-    width: 100%;
-    .nav-links{
-      font-size: 26px;
-      ul{
-       height: 20vh;
-        width: 60%;
-        margin: 0 auto;
-        display: block;
-        text-align: center;
-      }
-      li{
-        margin: 0;
-        width: 33%;
-        float: left;
-        &.btn{
-          width: 100%;
-          margin: 6vh auto;
-        }
-      }
-    }
-  }
-  .centered{
-    margin-left: 0;
-    padding-left: 10%;
-    width: 90%;
-    text-align: center;
-    .Description{
-      background-color: rgba($color: #000000, $alpha: 0.5);
-      p{
-        font-size: 30px;
-      }
-    }
-  }
-  .top{
-    width: 90%;
-    h2{
-      margin-bottom: 0;
-    }
-    .Project{
-      display: table-row;
-      height: 66vh;
-      .Title{
-        text-align: left;
-        width: 80%;
-        h3{
-          width: 100%;
-          margin-top: 10vh;
-          float: left;
-      
 
-        }
-      }
-      .ImageDisplay{
-        margin-top: 5vh;
-        width: 100%;
-        margin-left: 0vh;
-        background-color: transparent;
-        img{
-          float: left;
-        }
-      }
-    }
- 
-
-  }
-  .Description{
-    p{
-      font-size: 24px;
-    }
-  }
+  
 }
 /*#endregion */
 
 /*#region Media  800*/
 @media (max-width: 800px){
 
-  h1{
-    font-size: 60px;
-  }
-  h2{
-    font-size: 40px;
-  }
-  h3{
-    font-size: 18px;
-  }
-  p{
-    font-size: 18px;
-  }
-  .leftcontainer{
-    .nav-links{
-      input{
-        font-size: 18px;
-      }
-    }
-  }
- 
+
 }
 /*#endregion */
 
@@ -584,42 +386,8 @@ section{
       
     }
   }
-  h1{
-    font-size: 40px;
-  }
-  h2{
-    
-    font-size: 22px;
-  }
-  h3{
-    font-size: 18px;
-  }
-  p{
-    font-size: 16px;
-  }
-  .leftcontainer{
-    h2{
-      margin-top: 1.5vh;
-    }
-    .nav-links{
-      ul{
-        width: 100vw;
-      }
-      input{
-        font-size: 20px;
-      }
-      li{
-        &.btn{
-          margin: 4vh auto;
-        }
-      }
-      a{
-        font-size: 20px;
-      }
-    }
 
-  
-  }
+
 
   .Project{
     .Title{
