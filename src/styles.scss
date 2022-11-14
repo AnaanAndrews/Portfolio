@@ -139,7 +139,7 @@ canvas {
 .section-wrapper {
 	width: 100%;
 	display: flex;
-	justify-content: start;
+	justify-content: flex-start;
 	padding-left: 10%;
 	padding-top: 20vh;
 	height: 100vh;
@@ -281,7 +281,7 @@ canvas {
 .project-button-container{
 	display: flex;
 	align-items: flex-end;
-	justify-content: start;
+	justify-content: flex-start;
 	bottom: 10px;
 	position: absolute;
 }
