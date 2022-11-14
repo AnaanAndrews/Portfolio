@@ -8,7 +8,7 @@ import GPos  from '../../Assets/Images/Grow/GrowPOS.PNG'
 import GHouseDetails1  from '../../Assets/Images/Grow/HouseDetails1.PNG'
 import GHouseDetails2  from '../../Assets/Images/Grow/HouseDetails2.PNG'
 import GHouseIndex  from '../../Assets/Images/Grow/houseIndex.png'
-import GMap  from '../../Assets/Images/Grow/Map.PNG'
+import GMap  from '../../Assets/Images/Grow/GrowMap.PNG'
 
 
 //Portfolio
