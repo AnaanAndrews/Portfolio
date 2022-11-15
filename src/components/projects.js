@@ -9,8 +9,8 @@ export default function Projects() {
 
 	return (
 		<div className="project-wrapper">
-			<h1 className="title-text text-light primary-text ma0 tma0">Projects</h1>
-			<h2 className="subtitle-text white-text text-bold mt0 mb5 ">Cool things I've Created!</h2>
+			<h1 className="title-text text-light primary-text ma0 tma0"  >Projects</h1>
+			<h2 className="subtitle-text white-text text-bold mt0 mb5 " id="project">Cool things I've Created!</h2>
 
 			<Project
 				projectState={"In Development"}

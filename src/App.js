@@ -12,8 +12,6 @@ import Title from "./components/Title.js";
 import Projects from "./components/projects.js";
 import InfiniteCardScroll from "./components/InfiniteCardScroll";
 
-
-
 //Page States
 import state from "./components/state.js";
 
@@ -140,8 +138,6 @@ function App() {
 		return 50;
 	};
 
-
-
 	//Scoll Section
 	const domContent = useRef();
 	const scrollArea = useRef();
@@ -178,9 +174,7 @@ function App() {
 						// bgColor={'#002233'}
 						bgColor={"#333333"}
 						Model={"basket"}>
-              
-
-              <div className="section-wrapper mbottom pb5">
+						<div className="section-wrapper mbottom pb5">
 							<div big-height="true" className="section-container card">
 								<div className="card-border"></div>
 								<div className="card-content pa8">
@@ -188,17 +182,20 @@ function App() {
 										About me
 									</h1>
 									<div className="description-container">
-										<p className="body-text white-text mtext-center ">
-											I am a full-stack developer who is hunting to conquer new and exciting programming / design challenges.
-											I’m always looking to expand my toolset by learning new technologies and then implementing them in
-											unique ways.
+										<p className="body-text white-text  ">
+
+											I’m a full-stack web developer. I’ve always been someone
+											who has both a <span className="primary-text">creative</span> and a <span className="primary-text">logical</span> side. Web development allows me to utilize these strengths in my
+											design and code. Programming is my life's <span className="primary-text">passion</span> and I'm excited to see where it takes me.
 										</p>
+										{/* <p className="body-text white-text ">
+										Outside of VS Code, I enjoy spending my time creating and texturing 3D models with Blender and substance painter and playing Discgolf
+										</p> */}
 									</div>
-						
 								</div>
 							</div>
 						</div>
-              
+
 						{/* <div className="section-wrapper mbottom pb5">
 							<div className="section-container about-container">
 								<div className="card-border"></div>
@@ -217,8 +214,6 @@ function App() {
 								</div>
 							</div>
 						</div> */}
-
-
 					</HtmlContent>
 					<HtmlContent
 						domContent={domContent}
@@ -279,7 +274,7 @@ function App() {
 										<h2 className="subtitle-text white-text ma0">(289)-501-9132</h2>
 									</li>
 									<li className="btn">
-										<a href="./AnaanAndrewsResume.pdf" download="AnaanAndrewsResume.pdf">
+										<a href="./AAndrewsResume.pdf" download="./AAndrewsResume.pdf">
 											Download Resume
 										</a>
 									</li>

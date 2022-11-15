@@ -10,7 +10,7 @@ return (
     <div className='section-wrapper mbottom pb25'>
     <div className='section-container'>
     <h1 className='main-title-text white-text mtext-center ma0' > Hi, Im Anaan. </h1> 
-    <h2 className='subtitle-text white-text mtext-center ma0'>I design &#38; build user interfaces</h2>
+    <h2 className='subtitle-text white-text mtext-center ma0'>I design &#38; build websites</h2>
 
     <div className="nav-links">
     <nav>
@@ -19,13 +19,13 @@ return (
         <input type="button" onClick={() => document.getElementById('about').scrollIntoView({behavior: "smooth", block: "center"})} value="About Me"/>
         </li>
         <li className="nav-link">
-        <input type="button" onClick={() => document.getElementById('project').scrollIntoView({behavior: "smooth", block: "nearest"})} value="Projects"/>
+        <input type="button" onClick={() => document.getElementById('project').scrollIntoView({behavior: "smooth", block: "end"})} value="Projects"/>
         </li>
         <li className="nav-link">
         <input type="button" onClick={() => document.getElementById('contact').scrollIntoView({behavior: "smooth", block: "center"})} value="Contact"/>
         </li>
         <li className="nav-link">
-            <a className="nav-link-btn" href="./AnaanAndrewsResume.pdf" download='AnaanAndrewsResume.pdf'>Resume</a>
+            <a className="nav-link-btn" href="./AAndrewsResume.pdf" download='AAndrewsResume.pdf'>Resume</a>
         {/* <input type="button" onClick={MoveTo} value="Resume"/> */}
         </li>
         </ul>

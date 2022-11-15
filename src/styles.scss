@@ -56,6 +56,12 @@
 	}
 }
 
+.pb8{
+	padding-block: 4px;
+}
+.pi4{
+	padding-inline: 4px;
+}
 
 .pIcon{
 
@@ -835,9 +841,10 @@ background: radial-gradient(
 	.nav-link-btn {
 		margin-top: 20px;
 		display: block;
+		cursor: pointer;
 	}
 	.nav-link {
-	
+			cursor: pointer;
 			flex-shrink: 0;
 			width: 30%;
 			min-width: 30%;
@@ -863,7 +870,9 @@ background: radial-gradient(
 		
 	}
 
-	
+	.description-container {
+		padding-inline: 4px;
+	}
 
 }
 
