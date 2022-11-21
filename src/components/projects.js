@@ -61,7 +61,7 @@ export default function Projects() {
 			<Project
 				projectState={"Completed"}
 				title={"Grow Community Project"}
-				link={"https://github.com/samarthharjai/PinewoodGrow"}
+				link={"https://github.com/samarthharjai/PinewoodGrow/tree/PreSamarth2"}
 				imgData={"grow"}
 				prop={
 					<>
