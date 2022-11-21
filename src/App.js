@@ -174,11 +174,11 @@ function App() {
 						// bgColor={'#002233'}
 						bgColor={"#333333"}
 						Model={"basket"}>
-						<div className="section-wrapper mbottom pb5">
+						<div className="section-wrapper mbottom pb5" id="about" >
 							<div big-height="true" className="section-container card">
 								<div className="card-border"></div>
 								<div className="card-content pa8">
-									<h1 id="about" className="title-text primary-text mtext-center text-light  ma0">
+									<h1 className="title-text primary-text mtext-center text-light  ma0">
 										About me
 									</h1>
 									<div className="description-container">
@@ -225,13 +225,13 @@ function App() {
 						Model={"none"}>
 						<div className="center-wrap">
 							<div className="center-items">
-								<h1 className="title-text primary-text text-center text-light ma0">Relevant Skills</h1>
-								<h2 className="subtitle-text white-text  text-center mt0">Front-end</h2>
+								<h1 className="title-text primary-text text-center text-light ma0"  id="project">Relevant Skills</h1>
+								<h2 className="subtitle-text white-text  text-center mt0" >Front-end</h2>
 
 								<InfiniteCardScroll type={"front"} direction={"pan-left"} delay={""} />
 								<h2 className="subtitle-text white-text  text-center mt0">Back-end</h2>
 								<InfiniteCardScroll type={"back"} direction={"pan-right"} delay={""} />
-								<h2 className="subtitle-text white-text  text-center mt0">Tools</h2>
+								<h2 className="subtitle-text white-text  text-center mt0" >Tools</h2>
 								<InfiniteCardScroll type={"tools"} direction={"pan-left"} delay={"animation-delay"} />
 								{/*             
               <div className='top'>

@@ -16,13 +16,13 @@ return (
     <nav>
         <ul>
         <li className="nav-link">
-        <input type="button" onClick={() => document.getElementById('about').scrollIntoView({behavior: "smooth", block: "center"})} value="About Me"/>
+        <input type="button" onClick={() => document.getElementById('about').scrollIntoView({behavior: "smooth", block: "start"})} value="About Me"/>
         </li>
         <li className="nav-link">
-        <input type="button" onClick={() => document.getElementById('project').scrollIntoView({behavior: "smooth", block: "end"})} value="Projects"/>
+        <input type="button" onClick={() => document.getElementById('project').scrollIntoView({behavior: "smooth", block: "start"})} value="Projects"/>
         </li>
         <li className="nav-link">
-        <input type="button" onClick={() => document.getElementById('contact').scrollIntoView({behavior: "smooth", block: "center"})} value="Contact"/>
+        <input type="button" onClick={() => document.getElementById('contact').scrollIntoView({behavior: "smooth", block: "start"})} value="Contact"/>
         </li>
         <li className="nav-link">
             <a className="nav-link-btn" href="./AAndrewsResume.pdf" download='AAndrewsResume.pdf'>Resume</a>

@@ -140,83 +140,15 @@ html,body,#root {
 
 }
 
-.container {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.leftcontainer {
-  margin: 35vh auto;
-  width: 60%;
-  height: 100vh;
-  display: block;
-  align-items: center;
-  justify-content: center;
-}
 
 
-.title{
-  color: #fff;
-  padding-left: 3vw;
-  h1{
-  margin-bottom: 0px;
-    }
-  h2{
-    font-weight: 300;
-    margin-top: 0vh;
-  }
-}
-
-.centered {
-  
-  width: 50vh;
-  margin-left: 25%;
-  margin-top: 10%;
-  h1{
-    color: $Primary;
-  }
-  p{
-    font-size: 24px;
-    color: #fff;
-    font-weight: 300;
-  }
-
-  justify-content: center;
-  display: block;
-}
 
 
-.top{
-  width: 100vw;
-  margin: 0 auto 90vh auto;
-  text-align: center;
-
-  h1{
-    color: $Primary;
-    margin-bottom: 5px;
-  }
-  h2{
-    color: #fff;
-    margin-top: 0px;
-    font-weight: 100;
-  }
-  p{
-    color: #fff;
-  }
-
-  justify-content: center;
-  display: block;
-}
 
 
-section{
-  scroll-snap-align: flex-start;
-}
+// section{
+//   scroll-snap-align: flex-start;
+// }
 
 
 .icon{
@@ -253,159 +185,13 @@ section{
 
 
 
-.SkillContainer{
-  width: 100%;
-  height: 80vh;
-  display: flex;
-  background-image: url('./Assets/svg/Circle.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-// .nav-links{
-//   margin-top: 4vh;
-//   font-size: 20px;
-//   nav {
-//     ul {
-//         margin: 0;
-//         padding: 0;
-//         display: flex;
-//     li {
-//       input{
-//         background: none;
-//         border: none;
-//         cursor: pointer;
-//         color: #fff;
-//         font-size: 24px;
-//         font-family: 600;
-//         padding:  0px;
-//       }
-//         list-style: none;
-//         margin: 0 30px;
-//         &.btn {
-//         a {
-//             color: #fff;
-//             font-weight: 600;
-//             background: #23232a;
-//             padding: 16px 24px;
-//             border-radius: 10px;
-//             margin-top: 20vh;
-//         }
-//         }
-//         a {
-//           text-decoration: none;
-//             text-transform: capitalize; 
-//             color: #fff;
-//         }
-//         }
-//     }
-// }
-// }
-.Description{
-  border-left: solid $Primary 4px;
-  padding-left: 10px;
-  margin-left: 2%;
-}
-
-// .ImageDisplay{
-
-//   width: 100%;
-//   background-color: #f15946;
-//   border-bottom: #f15946 solid 2px;
-  
-//   img{
-//     display: block;
-//     width: 100%;
-//     height: 100%;
-//     object-fit: cover;
-//   }
-// }
 
 
 
 
-/*#region Media 1440*/
-
-
-@media (max-width: 1440px){
-
-  .centered{
-    margin: 0 auto;
-    padding-left: 10%;
-    width: 60%;
-    text-align: center;
-    .Description{
-      padding: 3%;
-      background-color: rgba($color: #000000, $alpha: 0.5);
-      
-    }
-  }
-  h3{
-    font-size: 18px;
-  }
-  p{
-    font-size: 17px;
-  }
-  
-}
-/*#endregion */
-
-/*#region Media 1000*/
-@media (max-width: 1000px){
-
-
-  
-}
-/*#endregion */
-
-/*#region Media  800*/
-@media (max-width: 800px){
-
-
-}
-/*#endregion */
-
-/*#region Media 470*/
-@media (max-width: 600px){
-  .centered{
-    margin-top: 10vh;
-    .Description{
-      p{
-        font-size: 18px;
-      }
-    }
-  }
-  .Project{
-    .Description{
-      margin-top: 4vh;
-      p{
-        font-size: 16px;
-        font-weight: 300;
-      }
-      
-    }
-  }
 
 
 
-  .Project{
-    .Title{
-    .Github-Button{
-      left: 50%;
-      transform: translateX(-50%);   
-      p{
-        font-size: 16px;
-      }
-      img{
-        height: 46px;
-      }
-  }
-    }
-  }
-    
-
-}
 /*#endregion */
 
 .all-page-container {

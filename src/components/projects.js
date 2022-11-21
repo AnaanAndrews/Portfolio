@@ -8,13 +8,13 @@ export default function Projects() {
 	// const p2 = 'The objective of the application is to create a member management system and a point of sales system to replace their current pen and paper systems. My scope for the project is the implementation of the google maps API for place auto-completion and map reports of their members.';
 
 	return (
-		<div className="project-wrapper">
+		<div className="project-wrapper" >
 			<h1 className="title-text text-light primary-text ma0 tma0"  >Projects</h1>
-			<h2 className="subtitle-text white-text text-bold mt0 mb5 " id="project">Cool things I've Created!</h2>
+			<h2 className="subtitle-text white-text text-bold mt0 mb5 ">Cool things I've Created!</h2>
 
 			<Project
 				projectState={"In Development"}
-				title={"Qaunt's Query"}
+				title={"Quant's Query"}
 				link={"https://quantsquery.com/"}
 				imgData={"qq"}
 				live={true}
