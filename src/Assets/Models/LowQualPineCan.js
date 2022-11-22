@@ -11,8 +11,8 @@ export default function Model({ ...props }) {
   const { actions } = useAnimations(animations, group)
   useEffect(()=>{
     actions.Spin.play();
- 
-  })
+
+  }, [actions.Spin])
 
   return (
     <group ref={group} {...props} dispose={null}>

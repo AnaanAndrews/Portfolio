@@ -69,7 +69,8 @@ const HtmlContent = ({ domContent, children, groupPositionY, position, rotation,
 	//If Object is in view Change Background colour
 	useEffect(() => {
 		inView && (document.body.style.backgroundColor = bgColor);
-	});
+	
+	},[inView, bgColor]);
 
 	return (
 		<Section factor={1.5} offset={1}>
