@@ -275,7 +275,7 @@ function App() {
 										<h2 className="subtitle-text white-text ma0">(289)-501-9132</h2>
 									</li>
 									<li className="btn">
-										<a href="./AAndrewsResume.pdf" download="./AAndrewsResume.pdf">
+										<a href="./Resume2024.pdf" download="./Resume2024.pdf">
 											Download Resume
 										</a>
 									</li>
