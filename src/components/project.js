@@ -25,7 +25,7 @@ const Project = ({ projectState, title, link, imgData, live, prop }) => {
 				<div className="project-title-wrapper">
 					<div className="project-title">
 						<h3 className="ma0 body-text primary-text text-bold  ">{projectState}</h3>
-						<h2 className="mt0  subtitle-text  white-text text-light ma0 ">{title}</h2>
+						<h2  className="mt0  subtitle-text  white-text text-light ma0 pb-2 ">{title}</h2>
 					</div>
 					<div className="project-title-icons">
 						{icons.map(a => (

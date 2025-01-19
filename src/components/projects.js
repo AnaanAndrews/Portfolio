@@ -13,6 +13,52 @@ export default function Projects() {
 			<h2 className="subtitle-text white-text text-bold mt0 mb5 ">Cool things I've Created!</h2>
 
 			<Project
+				projectState={"Completed"}
+				title={"Rosa Flora Redesign"}
+				link={"https://www.rosaflora.com/"}
+				imgData={"rfl"}
+				live={true}
+				prop={
+					<>
+						<p className="body-text white-text mt0">
+
+							For this project, I completely redesigned and modernized the Rosaflora.com website, transforming it from an outdated, underperforming platform into a sleek, high-performance digital experience. My approach involved a comprehensive overhaul of both the design and technical architecture, ensuring the site was not only visually appealing but also optimized for speed and functionality.
+
+
+						</p>
+
+						<p className="body-text white-text ">
+							Key accomplishments include:
+						</p>
+						<ul className="body-text white-text ">
+							<li>
+								Responsive Design: Ensured full mobile compatibility and a seamless experience across devices.
+							</li>
+							<li>
+								Modernized Tech Stack: Updated the coding structure to utilize current best practices, enhancing scalability and performance.
+
+							</li>
+							<li>
+								Performance Optimization: Improved load times and user interaction through strategic asset management and code optimizations.
+
+							</li>
+							<li>
+								Collaborative Process: Worked closely with the Rosaflora team to understand their vision, incorporating feedback to ensure the site accurately reflected their brand and goals.
+
+							</li>
+							<li>
+								User-Centric Design: Followed the latest design trends to create an intuitive, aesthetically pleasing user interface that aligns with industry standards.
+
+							</li>
+						</ul>
+						<p className="body-text white-text ">
+						This redesign not only improved the site's visual appeal but also contributed to a better user experience, helping the brand connect with a broader audience in a more engaging and efficient way.
+
+						</p>
+					</>
+				}></Project>
+
+			<Project
 				projectState={"In Development"}
 				title={"Quant's Query"}
 				link={"https://quantsquery.com/"}
@@ -39,7 +85,7 @@ export default function Projects() {
 				title={"This Portfolio"}
 				link={"https://github.com/AnaanAndrews/Portfolio"}
 				imgData={"port"}
-      
+
 				prop={
 					<>
 						<p className="body-text white-text mt0">
@@ -48,11 +94,11 @@ export default function Projects() {
 						</p>
 						<p className="body-text white-text">
 							During development, the main difficulties I faced were the HTML portal scrolling behaviours in the canvas and
-							the model lighting. 
+							the model lighting.
 						</p>
 
 						<p className="body-text white-text">
-					        I feel as if I’ve only scratched the surface of three.js
+							I feel as if I’ve only scratched the surface of three.js
 							and what is capable of. I look forward to continuing to create exciting things with React and three.js
 						</p>
 					</>

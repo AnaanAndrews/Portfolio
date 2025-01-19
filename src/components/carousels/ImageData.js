@@ -24,6 +24,18 @@ import QDarkMain from '../../Assets/Images/QQ/DarkMain.PNG'
 import QDarkSignUp from '../../Assets/Images/QQ/DarkSignup.PNG'
 import QLightMain from '../../Assets/Images/QQ/LightMain.PNG'
 
+//Rosa Flora
+
+import rfl1 from '../../Assets/Images/RosaFlora/RFL1.png'
+import rfl2 from '../../Assets/Images/RosaFlora/RFL2.png'
+import rfl3 from '../../Assets/Images/RosaFlora/RFL3.png'
+import rfl4 from '../../Assets/Images/RosaFlora/RFL4.png'
+import rfl5 from '../../Assets/Images/RosaFlora/RFL5.png'
+
+
+
+
+
 
 
 export const ImageData = type =>{
@@ -107,6 +119,40 @@ export const ImageData = type =>{
 
         ]
     }
+
+    if (type === 'rfl'){
+        return  [
+            {
+            key: "RFL1",
+            src: {rfl1},
+            alt: "Rosa Flora landing page"
+            },
+            { 
+                key: "RFL2",
+            src: {rfl2},
+            alt: "Rosa Flora Sustanability section on landing page"
+            },
+            {   
+                key: "RFL3",
+            src: {rfl3},
+            alt: "Rosa flora flower gallery page"    
+            },
+            { 
+                key: "RFL4",
+            src: {rfl4},
+            alt: "Rosa Flora Flower gallery inspection detials popup"
+            },
+            {   
+                key: "RFL5",
+            src: {rfl5},
+            alt: "Rosa Flora's Growing Greener page"    
+            },
+
+        ]
+    }
+
+
+
 
 }
 

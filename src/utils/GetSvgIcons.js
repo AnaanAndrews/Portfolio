@@ -292,7 +292,28 @@ export function getSvgIconSet (type){
         ];
             
     }
+    if(type === "rfl"){
 
+        return  [
+            {
+                icon: VueIcon, 
+                alt: "Vue icon",
+                ep: "", 
+            },
+            {
+                icon: netCoreIcon,
+                alt: "dot net core Icon",
+                ep: "", 
+            },
+    
+            {
+                icon: SqlIcon,
+                alt: "Sql icon",
+                ep: "", 
+            },
+        ];
+            
+    }
 
 
 }

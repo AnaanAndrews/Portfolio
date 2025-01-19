@@ -19,8 +19,15 @@
 
 	
 }
+.project-list-ul{
+	li{
+		padding-block: 8px;
+	}
+}
 
-
+.pb2{
+	padding-bottom: 16px !important;
+}
 .custom-button{
 
 	border: 1px solid var(--Primary);
